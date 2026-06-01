@@ -1,17 +1,61 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="StayPrivate | Private tools for important information"
+  description="StayPrivate builds secure tools for sending, storing and finding important documents and information."
+>
+  <main class="sp-home">
+    <section class="sp-hero">
+      <div class="sp-container sp-hero-grid">
+        <div class="sp-hero-copy">
+          <p class="sp-kicker">StayPrivate</p>
+
+          <h1>
+            Private tools for important information.
+          </h1>
+
+          <p class="sp-hero-intro">
+			StayPrivate builds secure products and tailored solutions that help businesses
+			deliver important documents, help people keep and find them again, and support
+			organisations with specialist secure communication requirements.
+		</p>
+
+          <div class="sp-hero-actions">
+            <a href="https://documentd.com" class="sp-btn sp-btn-primary">
+              Explore Documentd
+            </a>
+            <a href="https://keepd.com" class="sp-btn sp-btn-secondary">
+              Explore Keepd
+            </a>
+          </div>
+        </div>
+
+		<div class="sp-hero-panel">
+		<div class="sp-product-card documentd-card">
+			<p>Documentd</p>
+			<h2>For businesses</h2>
+			<span>Send customer documents securely, without portal friction.</span>
+		</div>
+
+		<div class="sp-product-card keepd-card">
+			<p>Keepd</p>
+			<h2>For people</h2>
+			<span>Access, organise and find important documents again later.</span>
+		</div>
+
+		<div class="sp-product-card bespoke-card">
+			<p>Bespoke</p>
+			<h2>For specialist requirements</h2>
+			<span>
+			Tailored secure communication, file sharing and information management
+			solutions for organisations with unique workflows.
+			</span>
+		</div>
+		</div>
+		
+      </div>
+    </section>
+  </main>
+</BaseLayout>
