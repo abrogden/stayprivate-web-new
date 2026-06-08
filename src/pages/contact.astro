@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact | StayPrivate"
+  description="Contact StayPrivate about Documentd, Keepd or bespoke secure communication solutions."
+>
+  <main class="sp-home">
+    <section class="sp-hero">
+      <div class="sp-container bespoke-contact-grid">
+        <div>
+          <p class="sp-kicker">Contact</p>
+
+          <h1>Let's talk</h1>
+
+          <p class="sp-hero-intro">
+            Whether you're interested in Documentd, Keepd, bespoke solutions,
+            or support for an existing platform, we'd be happy to hear from you.
+          </p>
+
+            <div class="contact-options-card">
+                <p class="contact-options-kicker">We can help with</p>
+
+                <div class="contact-options">
+                    <div>
+                    <strong>Documentd</strong>
+                    <span>Customer document delivery</span>
+                    </div>
+
+                    <div>
+                    <strong>Keepd</strong>
+                    <span>Private document access and storage</span>
+                    </div>
+
+                    <div>
+                    <strong>Bespoke</strong>
+                    <span>Specialist communication and workflow solutions</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <form class="bespoke-form" action="/contact.php" method="post">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+
+          <label>
+            <span data-word="organization">Organisation</span>
+            <input
+              type="text"
+              name="organisation"
+              autocomplete="organization"
+            />
+          </label>
+
+            <label class="custom-select-label">
+            How can we help?
+
+            <input type="hidden" name="interest" required id="interestInput" />
+
+            <div class="custom-select" data-custom-select>
+                <button type="button" class="custom-select-trigger">
+                <span>Select an option</span>
+                <span class="custom-select-arrow"></span>
+                </button>
+
+                <div class="custom-select-menu">
+                <button type="button" data-value="documentd">Documentd</button>
+                <button type="button" data-value="keepd">Keepd</button>
+                <button type="button" data-value="bespoke">Bespoke</button>
+                <button type="button" data-value="support">Support for an existing platform</button>
+                </div>
+            </div>
+            </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="8" required></textarea>
+          </label>
+
+          <input type="hidden" name="source" value="contact-page" />
+
+          <button type="submit" class="sp-btn sp-btn-primary">
+            Send message
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  document.querySelectorAll("[data-custom-select]").forEach((select) => {
+    const trigger = select.querySelector(".custom-select-trigger");
+    const triggerText = trigger.querySelector("span:first-child");
+    const menu = select.querySelector(".custom-select-menu");
+    const input = document.getElementById("interestInput");
+
+    trigger.addEventListener("click", () => {
+      select.classList.toggle("open");
+    });
+
+    menu.querySelectorAll("button").forEach((option) => {
+      option.addEventListener("click", () => {
+        input.value = option.dataset.value;
+        triggerText.textContent = option.textContent;
+        select.classList.remove("open");
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!select.contains(event.target)) {
+        select.classList.remove("open");
+      }
+    });
+  });
+</script>
+</BaseLayout>

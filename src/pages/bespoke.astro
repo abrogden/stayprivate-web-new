@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { withBase } from "../lib/paths";
+
+const contactHref = withBase("/contact");
+---
+
+<BaseLayout
+  title="Bespoke | StayPrivate"
+  description="Bespoke secure communication, file sharing and information management solutions from StayPrivate."
+>
+  <main class="sp-home">
+    <section class="sp-hero bespoke-page">
+      <div class="sp-container bespoke-grid">
+        <div>
+          <p class="sp-kicker">Bespoke</p>
+
+          <h1>Secure communication solutions for specialist requirements</h1>
+
+          <p class="sp-hero-intro">
+            StayPrivate provides tailored private email, secure file sharing and
+            information management platforms for <span data-word="organizations">organisations</span> whose workflows need
+            more than an off-the-shelf product.
+          </p>
+
+          <div class="sp-hero-actions">
+            <a href={contactHref} class="sp-btn sp-btn-primary">
+              Contact us
+            </a>
+
+            <a
+              href="https://admin.stayprivate.com"
+              class="sp-btn sp-btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open admin portal
+            </a>
+          </div>
+        </div>
+
+        <aside class="bespoke-panel bespoke-support-panel">
+          <p class="panel-kicker">Tailored support</p>
+
+          <h2>Secure platforms shaped around real operational workflows</h2>
+
+          <p>
+            We provide tailored solutions for <span data-word="organizations">organisations</span> with specialist delivery, communication
+            and information management needs.
+          </p>
+
+          <div class="bespoke-support-list">
+            <div>
+              <strong>Private email and file sharing</strong>
+              <span>
+                Secure systems for sensitive communication, document exchange and
+                controlled access.
+              </span>
+            </div>
+
+            <div>
+              <strong>Custom workflows</strong>
+              <span>
+                Tailored processes for <span data-word="organizations">organisations</span> where standard software does
+                not match the way they need to work.
+              </span>
+            </div>
+
+            <div>
+              <strong>Continuity and evolution</strong>
+              <span>
+                Ongoing support for existing platforms, with practical changes and
+                improvements when requirements develop.
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bespoke-contact-section">
+      <div class="sp-container">
+        <div class="bespoke-contact-card">
+          <div>
+            <p class="sp-kicker">Talk to us</p>
+
+            <h2>Have a specialist secure communication requirement?</h2>
+
+            <p>
+              Whether you already use a StayPrivate platform or need a tailored
+              solution for a new workflow, we can help you understand the right
+              way forward.
+            </p>
+          </div>
+
+          <div class="bespoke-contact-actions">
+            <a href={contactHref} class="sp-btn sp-btn-primary">
+              Contact us
+            </a>
+
+            <a
+              href="https://admin.stayprivate.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sp-btn sp-btn-secondary"
+            >
+              Open admin portal
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

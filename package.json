@@ -6,12 +6,16 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-     "dev": "astro dev --port 4323",
+    "dev": "astro dev --port 4323",
     "build": "astro build",
-    "preview": "astro preview --port 4323",
-    "astro": "astro"
+    "build:staging": "cross-env DEPLOY_BASE=/staging astro build",
+    "build:live": "cross-env DEPLOY_BASE=/ astro build",
+    "preview": "astro preview --port 4323"
   },
   "dependencies": {
     "astro": "^6.4.2"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0"
   }
 }

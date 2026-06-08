@@ -1,0 +1,36 @@
+---
+import { withBase } from "../lib/paths";
+
+const homeHref = withBase("/");
+const aboutHref = withBase("/about");
+const bespokeHref = withBase("/bespoke");
+const contactHref = withBase("/contact");
+const logoSrc = withBase("/images/StayPrivate-Logo.svg");
+---
+
+<header class="sp-header">
+  <div class="sp-container sp-header-inner">
+    <a href={homeHref} class="sp-logo" aria-label="StayPrivate">
+      <img
+        src={logoSrc}
+        alt="StayPrivate"
+        class="sp-logo-image"
+      />
+    </a>
+
+    <nav class="sp-nav">
+      <a href={aboutHref}>About</a>
+      <a href={bespokeHref}>Bespoke</a>
+      <a href={contactHref}>Contact</a>
+    </nav>
+
+    <a
+      href="https://admin.stayprivate.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="sp-header-btn"
+    >
+      Admin Portal
+    </a>
+  </div>
+</header>

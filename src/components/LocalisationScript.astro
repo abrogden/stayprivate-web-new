@@ -1,0 +1,304 @@
+<script>
+  const LOCALISATION = {
+    GBP: {
+    currency: "GBP",
+    country: "GB",
+    prices: {
+        payg: "£20",
+        monthly: "£20",
+        extra: "£5",
+    },
+    words: {
+        organization: "organisation",
+        organizations: "organisations",
+        organize: "organise",
+        organizes: "organises",
+        organizing: "organising",
+        organized: "organised",
+        Organized: "Organised",
+
+        color: "colour",
+        colors: "colours",
+
+        behavior: "behaviour",
+
+        favorite: "favourite",
+        favorites: "favourites",
+
+        center: "centre",
+        centers: "centres",
+
+        analyze: "analyse",
+        analyzes: "analyses",
+        analyzing: "analysing",
+        analyzed: "analysed",
+
+        customize: "customise",
+        customizes: "customises",
+        customizing: "customising",
+        customized: "customised",
+
+        optimize: "optimise",
+        optimizes: "optimises",
+        optimizing: "optimising",
+        optimized: "optimised",
+
+        authorize: "authorise",
+        authorizes: "authorises",
+        authorizing: "authorising",
+        authorized: "authorised",
+
+        recognize: "recognise",
+        recognizes: "recognises",
+        recognizing: "recognising",
+        recognized: "recognised",
+
+        categorize: "categorise",
+        categorizes: "categorises",
+        categorizing: "categorising",
+        categorized: "categorised",
+
+        license: "licence",
+        licenses: "licences",
+
+        traveling: "travelling",
+        traveler: "traveller",
+        travelers: "travellers",
+
+        catalog: "catalogue",
+        catalogs: "catalogues",
+    },
+    },
+
+    USD: {
+    currency: "USD",
+    country: "US",
+    prices: {
+        payg: "$25",
+        monthly: "$25",
+        extra: "$6",
+    },
+    words: {
+        organization: "organization",
+        organizations: "organizations",
+        organize: "organize",
+        organizes: "organizes",
+        organizing: "organizing",
+        organized: "organized",
+        Organized: "Organized",
+
+        color: "color",
+        colors: "colors",
+
+        behavior: "behavior",
+
+        favorite: "favorite",
+        favorites: "favorites",
+
+        center: "center",
+        centers: "centers",
+
+        analyze: "analyze",
+        analyzes: "analyzes",
+        analyzing: "analyzing",
+        analyzed: "analyzed",
+
+        customize: "customize",
+        customizes: "customizes",
+        customizing: "customizing",
+        customized: "customized",
+
+        optimize: "optimize",
+        optimizes: "optimizes",
+        optimizing: "optimizing",
+        optimized: "optimized",
+
+        authorize: "authorize",
+        authorizes: "authorizes",
+        authorizing: "authorizing",
+        authorized: "authorized",
+
+        recognize: "recognize",
+        recognizes: "recognizes",
+        recognizing: "recognizing",
+        recognized: "recognized",
+
+        categorize: "categorize",
+        categorizes: "categorizes",
+        categorizing: "categorizing",
+        categorized: "categorized",
+
+        license: "license",
+        licenses: "licenses",
+
+        traveling: "traveling",
+        traveler: "traveler",
+        travelers: "travelers",
+
+        catalog: "catalog",
+        catalogs: "catalogs",
+    },
+    },
+
+    EUR: {
+    currency: "EUR",
+    country: "DE",
+    prices: {
+        payg: "€23",
+        monthly: "€23",
+        extra: "€6",
+    },
+    words: {
+        organization: "organisation",
+        organizations: "organisations",
+        organize: "organise",
+        organizes: "organises",
+        organizing: "organising",
+        organized: "organised",
+        Organized: "Organised",
+
+        color: "colour",
+        colors: "colours",
+
+        behavior: "behaviour",
+
+        favorite: "favourite",
+        favorites: "favourites",
+
+        center: "centre",
+        centers: "centres",
+
+        analyze: "analyse",
+        analyzes: "analyses",
+        analyzing: "analysing",
+        analyzed: "analysed",
+
+        customize: "customise",
+        customizes: "customises",
+        customizing: "customising",
+        customized: "customised",
+
+        optimize: "optimise",
+        optimizes: "optimises",
+        optimizing: "optimising",
+        optimized: "optimised",
+
+        authorize: "authorise",
+        authorizes: "authorises",
+        authorizing: "authorising",
+        authorized: "authorised",
+
+        recognize: "recognise",
+        recognizes: "recognises",
+        recognizing: "recognising",
+        recognized: "recognised",
+
+        categorize: "categorise",
+        categorizes: "categorises",
+        categorizing: "categorising",
+        categorized: "categorised",
+
+        license: "licence",
+        licenses: "licences",
+
+        traveling: "travelling",
+        traveler: "traveller",
+        travelers: "travellers",
+
+        catalog: "catalogue",
+        catalogs: "catalogues",
+    },
+    },
+  };
+
+  function getTrackingPath() {
+    let pathname = window.location.pathname;
+
+    if (pathname === "/" && window.location.origin === "https://keepd.com") {
+      pathname = "keepd";
+    }
+
+    pathname = pathname.replaceAll("/", "_");
+
+    const query = window.location.search.replaceAll("?", "");
+
+    if (query !== "") {
+      pathname = `${pathname}&${query}`;
+    }
+
+    return pathname;
+  }
+
+  function applyCurrency(currency) {
+    const locale = LOCALISATION[currency] || LOCALISATION.GBP;
+
+    document.documentElement.dataset.currency = locale.currency;
+
+    document.querySelectorAll("[data-price]").forEach((node) => {
+      const key = node.dataset.price;
+
+      if (locale.prices[key]) {
+        node.textContent = locale.prices[key];
+      }
+    });
+
+    window.dispatchEvent(
+      new CustomEvent("sp:currency-ready", {
+        detail: locale,
+      })
+    );
+  }
+
+  function applyWords(currency) {
+    const locale = LOCALISATION[currency] || LOCALISATION.GBP;
+
+    //const locale = LOCALISATION.USD;
+
+    document.documentElement.dataset.country = locale.country;
+
+    document.querySelectorAll("[data-word]").forEach((node) => {
+      const key = node.dataset.word;
+
+      if (locale.words[key]) {
+        node.textContent = locale.words[key];
+      }
+    });
+
+    document.querySelectorAll("[data-location-field]").forEach((field) => {
+      field.value = locale.country;
+    });
+
+    window.dispatchEvent(
+      new CustomEvent("sp:words-ready", {
+        detail: locale,
+      })
+    );
+  }
+
+  async function loadLocalisation() {
+    applyCurrency("GBP");
+    applyWords("GBP");
+
+    try {
+      const path = encodeURIComponent(getTrackingPath());
+
+      const response = await fetch(
+        `https://services2.stayprivate.com/utils/localdata?path=${path}`
+      );
+
+      if (!response.ok) return;
+
+      const data = await response.json();
+      const detectedCurrency = data.country_currency || "GBP";
+
+      applyCurrency(detectedCurrency);
+      applyWords(detectedCurrency);
+    } catch (error) {
+      console.warn("Localisation unavailable; using GBP defaults.", error);
+    }
+  }
+
+  window.setStayPrivateCurrency = applyCurrency;
+
+  loadLocalisation();
+</script>

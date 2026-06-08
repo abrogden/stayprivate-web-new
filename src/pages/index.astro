@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { withBase } from "../lib/paths";
+
+const bespokeHref = withBase("/bespoke");
+const contactHref = withBase("/contact");
 ---
 
 <BaseLayout
   title="StayPrivate | Private tools for important information"
-  description="StayPrivate builds secure tools for sending, storing and finding important documents and information."
+  description="StayPrivate provides secure tools for sending, storing and finding important documents and information."
 >
   <main class="sp-home">
     <section class="sp-hero">
@@ -12,49 +17,95 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="sp-hero-copy">
           <p class="sp-kicker">StayPrivate</p>
 
-          <h1>
-            Private tools for important information.
-          </h1>
+          <h1>Secure delivery, storage and communication</h1>
 
           <p class="sp-hero-intro">
-			StayPrivate builds secure products and tailored solutions that help businesses
-			deliver important documents, help people keep and find them again, and support
-			organisations with specialist secure communication requirements.
-		</p>
-
-          <div class="sp-hero-actions">
-            <a href="https://documentd.com" class="sp-btn sp-btn-primary">
-              Explore Documentd
-            </a>
-            <a href="https://keepd.com" class="sp-btn sp-btn-secondary">
-              Explore Keepd
-            </a>
-          </div>
+            StayPrivate provides <strong>Documentd</strong> for sending important documents,
+            <strong>Keepd</strong> for keeping and finding them again, and bespoke secure
+            communication solutions for <span data-word="organizations">organisations</span>
+            with specialist requirements.
+          </p>
         </div>
 
-		<div class="sp-hero-panel">
-		<div class="sp-product-card documentd-card">
-			<p>Documentd</p>
-			<h2>For businesses</h2>
-			<span>Send customer documents securely, without portal friction.</span>
-		</div>
+        <div id="products" class="sp-hero-panel">
+          <a
+            href="https://documentd.com"
+            class="sp-product-card documentd-card"
+          >
+            <div>
+              <div class="sp-card-brand">
+                <img
+                  src="./images/Documentd-Mark.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="sp-card-brand-icon"
+                />
+                <span class="sp-card-brand-name">Documentd</span>
+              </div>
 
-		<div class="sp-product-card keepd-card">
-			<p>Keepd</p>
-			<h2>For people</h2>
-			<span>Access, organise and find important documents again later.</span>
-		</div>
+              <h2>Document delivery</h2>
 
-		<div class="sp-product-card bespoke-card">
-			<p>Bespoke</p>
-			<h2>For specialist requirements</h2>
-			<span>
-			Tailored secure communication, file sharing and information management
-			solutions for organisations with unique workflows.
-			</span>
-		</div>
-		</div>
-		
+              <span>
+                Send customer documents securely and help customers find them
+                again later.
+              </span>
+            </div>
+
+            <strong class="sp-card-cta">
+              Explore Documentd <span class="card-arrow">→</span>
+            </strong>
+          </a>
+
+          <a
+            href="https://keepd.com"
+            class="sp-product-card keepd-card"
+          >
+            <div>
+              <div class="sp-card-brand">
+                <img
+                  src="./images/Keepd-Mark.svg"
+                  alt=""
+                  aria-hidden="true"
+                  class="sp-card-brand-icon"
+                  style="transform: translateY(-2px);"
+                />
+                <span class="sp-card-brand-name">Keepd</span>
+              </div>
+
+              <h2>Personal storage</h2>
+
+              <span>
+                A private place to access, <span data-word="organize">organise</span>
+                and store important documents.
+              </span>
+            </div>
+
+            <strong class="sp-card-cta">
+              Explore Keepd <span class="card-arrow">→</span>
+            </strong>
+          </a>
+
+          <a
+            href={bespokeHref}
+            class="sp-product-card bespoke-card"
+          >
+            <div>
+              <p>Bespoke</p>
+
+              <h2>Bespoke solutions</h2>
+
+              <span>
+                Support for existing platforms and
+                <span data-word="organizations">organisations</span> with unique
+                secure communication workflows.
+              </span>
+            </div>
+
+            <strong class="sp-card-cta">
+              Learn more <span class="card-arrow">→</span>
+            </strong>
+          </a>
+        </div>
       </div>
     </section>
   </main>

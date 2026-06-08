@@ -1,8 +1,9 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-// https://astro.build/config
+const deployBase = process.env.DEPLOY_BASE || "/";
+
 export default defineConfig({
   site: "https://stayprivate.com",
+  base: deployBase,
   output: "static",
 });
