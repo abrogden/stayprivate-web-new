@@ -285,8 +285,14 @@
     try {
       const path = encodeURIComponent(getTrackingPath());
 
+      const siteHost = encodeURIComponent(
+        window.location.hostname
+          .toLowerCase()
+          .replace(/^www\./, "")
+      );
+
       const response = await fetch(
-        `https://services2.stayprivate.com/utils/localdata?path=${path}`
+        `https://services2.stayprivate.com/utils/localdata?path=${path}&site=${siteHost}`
       );
 
       if (!response.ok) return;

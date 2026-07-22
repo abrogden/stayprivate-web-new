@@ -9,8 +9,7 @@
     "dev": "astro dev --port 4323",
     "build": "astro build",
     "build:staging": "cross-env DEPLOY_BASE=/staging astro build",
-    "build:live": "cross-env DEPLOY_BASE=/ astro build",
-    "preview": "astro preview --port 4323"
+    "build:live": "cross-env DEPLOY_BASE=/ astro build"
   },
   "dependencies": {
     "astro": "^6.4.2"
