@@ -12,6 +12,7 @@
     "build:live": "cross-env DEPLOY_BASE=/ astro build"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.2"
   },
   "devDependencies": {

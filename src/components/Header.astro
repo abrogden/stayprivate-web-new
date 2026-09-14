@@ -2,15 +2,16 @@
 import { withBase } from "../lib/paths";
 
 const homeHref = withBase("/");
+const productsHref = withBase("/#products");
 const aboutHref = withBase("/about");
-const bespokeHref = withBase("/bespoke");
+const trustHref = withBase("/trust");
 const contactHref = withBase("/contact");
 const logoSrc = withBase("/images/StayPrivate-Logo.svg");
 ---
 
 <header class="sp-header">
   <div class="sp-container sp-header-inner">
-    <a href={homeHref} class="sp-logo" aria-label="StayPrivate">
+    <a href={homeHref} class="sp-logo" aria-label="StayPrivate home">
       <img
         src={logoSrc}
         alt="StayPrivate"
@@ -18,9 +19,10 @@ const logoSrc = withBase("/images/StayPrivate-Logo.svg");
       />
     </a>
 
-    <nav class="sp-nav">
+    <nav class="sp-nav" aria-label="Main navigation">
+      <a href={productsHref}>Products</a>
       <a href={aboutHref}>About</a>
-      <a href={bespokeHref}>Bespoke</a>
+      <a href={trustHref}>Trust</a>
       <a href={contactHref}>Contact</a>
     </nav>
 

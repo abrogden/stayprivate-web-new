@@ -7,41 +7,190 @@ import LocalisationScript from "../components/LocalisationScript.astro";
 
 const {
   title = "StayPrivate",
-  description = "StayPrivate builds private, secure tools for sending, storing and finding important information.",
+  description =
+    "StayPrivate builds secure products for important communication between organisations and individuals.",
 } = Astro.props;
 
+const siteOrigin = "https://stayprivate.com";
+
+const rawPath = Astro.url.pathname;
+
+const canonicalPath =
+  rawPath === "/"
+    ? "/"
+    : `${rawPath.replace(/\/+$/, "")}/`;
+
+const canonicalUrl =
+  new URL(canonicalPath, siteOrigin).toString();
+
+const isHomePage = canonicalPath === "/";
+
+const organizationStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://stayprivate.com/#organization",
+  name: "StayPrivate",
+  url: "https://stayprivate.com/",
+  logo: "https://stayprivate.com/images/StayPrivate-Logo.svg",
+};
+
+const websiteStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://stayprivate.com/#website",
+  url: "https://stayprivate.com/",
+  name: "StayPrivate",
+  publisher: {
+    "@id": "https://stayprivate.com/#organization",
+  },
+};
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- Canonical -->
+    <link
+      rel="canonical"
+      href={canonicalUrl}
+    />
+
+    <!-- Search metadata -->
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content={description}
+    />
+
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content={title}
+    />
+
+    <meta
+      property="og:description"
+      content={description}
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:url"
+      content={canonicalUrl}
+    />
+
+    <meta
+      property="og:site_name"
+      content="StayPrivate"
+    />
+
+    <meta
+      property="og:image"
+      content="https://stayprivate.com/images/stayprivate-social.png"
+    />
+
+    <meta
+      property="og:image:width"
+      content="1200"
+    />
+
+    <meta
+      property="og:image:height"
+      content="630"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="StayPrivate — Important information, from businesses to people"
+    />
+
+
+    <!-- X / Twitter -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content={title}
+    />
+
+    <meta
+      name="twitter:description"
+      content={description}
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://stayprivate.com/images/stayprivate-social.png"
+    />
+
+
+    <!-- Structured data: homepage only -->
+    {
+      isHomePage && (
+        <>
+          <script
+            type="application/ld+json"
+            set:html={JSON.stringify(organizationStructuredData)}
+          />
+
+          <script
+            type="application/ld+json"
+            set:html={JSON.stringify(websiteStructuredData)}
+          />
+        </>
+      )
+    }
+
+
+    <!-- Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-        />
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
 
-    <link rel="icon" href="/favicon.ico" />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/favicon.ico"
+    />
   </head>
 
   <body class="min-h-screen antialiased">
     <div class="site-background">
-        <Header />
 
-        <slot />
-        <Footer />
+      <Header />
+
+      <slot />
+
+      <Footer />
 
     </div>
 

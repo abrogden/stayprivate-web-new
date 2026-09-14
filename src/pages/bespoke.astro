@@ -1,115 +1,94 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 import { withBase } from "../lib/paths";
 
 const contactHref = withBase("/contact");
+const spmHref = withBase("/stayprivatemail");
+const secureCommHref = withBase("/secure-comm");
 ---
 
 <BaseLayout
-  title="Bespoke | StayPrivate"
-  description="Bespoke secure communication, file sharing and information management solutions from StayPrivate."
+  title="Bespoke secure communication solutions | StayPrivate"
+  description="Bespoke StayPrivate solutions for organisations with specialist workflows, integrations or secure communication requirements that do not fit a standard product."
 >
   <main class="sp-home">
-    <section class="sp-hero bespoke-page">
-      <div class="sp-container bespoke-grid">
+    <section class="sp-hero">
+      <div class="sp-container bespoke-page-grid">
         <div>
           <p class="sp-kicker">Bespoke</p>
-
-          <h1>Secure communication solutions for specialist requirements</h1>
-
+          <h1>When a standard product is not quite the right fit</h1>
           <p class="sp-hero-intro">
-            StayPrivate provides tailored private email, secure file sharing and
-            information management platforms for <span data-word="organizations">organisations</span> whose workflows need
-            more than an off-the-shelf product.
+            We adapt and integrate StayPrivate technology around specialist workflows,
+            legacy systems and secure communication requirements that need more than
+            an off-the-shelf implementation.
           </p>
-
           <div class="sp-hero-actions">
-            <a href={contactHref} class="sp-btn sp-btn-primary">
-              Contact us
-            </a>
-
-            <a
-              href="https://admin.stayprivate.com"
-              class="sp-btn sp-btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open admin portal
-            </a>
+            <a href={contactHref} class="sp-btn sp-btn-primary">Contact us</a>
           </div>
         </div>
 
-        <aside class="bespoke-panel bespoke-support-panel">
-          <p class="panel-kicker">Tailored support</p>
-
-          <h2>Secure platforms shaped around real operational workflows</h2>
-
-          <p>
-            We provide tailored solutions for <span data-word="organizations">organisations</span> with specialist delivery, communication
-            and information management needs.
-          </p>
-
-          <div class="bespoke-support-list">
-            <div>
-              <strong>Private email and file sharing</strong>
-              <span>
-                Secure systems for sensitive communication, document exchange and
-                controlled access.
-              </span>
-            </div>
-
-            <div>
-              <strong>Custom workflows</strong>
-              <span>
-                Tailored processes for <span data-word="organizations">organisations</span> where standard software does
-                not match the way they need to work.
-              </span>
-            </div>
-
-            <div>
-              <strong>Continuity and evolution</strong>
-              <span>
-                Ongoing support for existing platforms, with practical changes and
-                improvements when requirements develop.
-              </span>
-            </div>
+        <aside class="bespoke-summary-panel">
+          <p class="bespoke-panel-label">Start with the standard products</p>
+          <div class="bespoke-summary-list">
+            <a href="https://documentd.com"><strong>Documentd</strong><span>Important document delivery.</span></a>
+            <a href={spmHref}><strong>StayPrivateMail</strong><span>Private two-way communication and file sharing.</span></a>
+            <a href={secureCommHref}><strong>Secure Communications</strong><span>Company-controlled customer environments.</span></a>
           </div>
+          <p class="bespoke-panel-note">Bespoke begins where those standard models need extending or adapting.</p>
         </aside>
       </div>
     </section>
 
-    <section class="bespoke-contact-section">
-      <div class="sp-container">
-        <div class="bespoke-contact-card">
-          <div>
-            <p class="sp-kicker">Talk to us</p>
-
-            <h2>Have a specialist secure communication requirement?</h2>
-
-            <p>
-              Whether you already use a StayPrivate platform or need a tailored
-              solution for a new workflow, we can help you understand the right
-              way forward.
-            </p>
-          </div>
-
-          <div class="bespoke-contact-actions">
-            <a href={contactHref} class="sp-btn sp-btn-primary">
-              Contact us
-            </a>
-
-            <a
-              href="https://admin.stayprivate.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="sp-btn sp-btn-secondary"
-            >
-              Open admin portal
-            </a>
-          </div>
+    <section class="bespoke-section bespoke-section--soft">
+      <div class="sp-container bespoke-two-col">
+        <div>
+          <p class="sp-kicker">Specialist requirements</p>
+          <h2>Fit the technology around the organisation</h2>
         </div>
+        <div class="bespoke-copy-block">
+          <p>
+            Established organisations often have systems and processes that cannot
+            simply be replaced. The requirement may involve a legacy platform, an
+            unusual customer journey, a particular integration or a workflow with
+            constraints that standard software does not address cleanly.
+          </p>
+          <p>
+            In those cases we can adapt StayPrivate technology around the requirement,
+            rather than asking the organisation to reshape the requirement around the
+            software.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bespoke-section">
+      <div class="sp-container">
+        <div class="bespoke-heading">
+          <p class="sp-kicker">Typical work</p>
+          <h2>Extend, integrate or evolve</h2>
+        </div>
+        <div class="bespoke-feature-grid">
+          <article><span>01</span><h3>Integrations</h3><p>Connect secure communication into existing customer, operational or back-office systems.</p></article>
+          <article><span>02</span><h3>Specialist workflows</h3><p>Adapt communication and information exchange around unusual operational requirements.</p></article>
+          <article><span>03</span><h3>Existing platforms</h3><p>Continue developing long-established StayPrivate solutions where replacement would add little value.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bespoke-cta-section">
+      <div class="sp-container bespoke-cta-card">
+        <div>
+          <p class="sp-kicker">Talk to us</p>
+          <h2>Have a secure communication requirement that does not fit neatly?</h2>
+          <p>Tell us what you need to achieve, how your existing systems work and where the standard products fall short.</p>
+        </div>
+        <a href={contactHref} class="sp-home-contact-cta">Contact us <span>→</span></a>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .bespoke-page-grid,.bespoke-two-col{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(3rem,7vw,7rem);align-items:start}.bespoke-summary-panel{padding:clamp(1.8rem,4vw,2.5rem);border:1px solid var(--sp-border);border-radius:28px;background:rgba(255,255,255,.85);box-shadow:0 28px 70px rgba(32,36,79,.1)}.bespoke-panel-label{margin:0 0 1rem;color:var(--sp-blue);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.bespoke-summary-list{display:grid;gap:1px;overflow:hidden;border:1px solid var(--sp-border);border-radius:20px;background:var(--sp-border)}.bespoke-summary-list a{display:grid;gap:.3rem;padding:1rem 1.1rem;background:#fff;text-decoration:none}.bespoke-summary-list strong{color:var(--sp-ink);font-family:Poppins,sans-serif}.bespoke-summary-list span,.bespoke-panel-note{color:var(--sp-muted);font-size:.94rem;line-height:1.55}.bespoke-panel-note{margin:1rem 0 0}.bespoke-section{padding-block:clamp(5rem,8vw,8rem)}.bespoke-section--soft{background:rgba(255,255,255,.62)}.bespoke-two-col h2,.bespoke-heading h2,.bespoke-cta-card h2{margin:.4rem 0 1rem;color:var(--sp-ink);font-size:clamp(2rem,4vw,3rem);line-height:1.13;letter-spacing:-.04em}.bespoke-copy-block{display:grid;gap:1rem}.bespoke-copy-block p,.bespoke-cta-card p{margin:0;color:var(--sp-muted);line-height:1.75}.bespoke-heading{max-width:760px;margin-bottom:clamp(2.5rem,5vw,4rem)}.bespoke-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}.bespoke-feature-grid article{padding:1.8rem;border:1px solid var(--sp-border);border-radius:22px;background:#fff}.bespoke-feature-grid span{color:var(--sp-blue);font-size:.75rem;font-weight:700}.bespoke-feature-grid h3{margin:.55rem 0 .6rem;color:var(--sp-ink);font-size:1.25rem}.bespoke-feature-grid p{margin:0;color:var(--sp-muted);line-height:1.7}.bespoke-cta-section{padding:clamp(4rem,7vw,7rem) 0}.bespoke-cta-card{display:flex;gap:2rem;align-items:center;justify-content:space-between;padding:clamp(2rem,5vw,3.5rem);border:1px solid var(--sp-border);border-radius:28px;background:#fff;box-shadow:0 24px 60px rgba(32,36,79,.08)}.bespoke-cta-card>div{max-width:760px}
+  @media(max-width:900px){.bespoke-page-grid,.bespoke-two-col{grid-template-columns:1fr}.bespoke-feature-grid{grid-template-columns:1fr}.bespoke-cta-card{align-items:flex-start;flex-direction:column}}
+</style>

@@ -1,115 +1,148 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+
+const spmHref = withBase("/stayprivatemail");
+const secureCommHref = withBase("/secure-comm");
+const bespokeHref = withBase("/bespoke");
 ---
 
 <BaseLayout
-  title="About | StayPrivate"
-  description="StayPrivate provides secure products and bespoke solutions for document delivery, storage and communication."
+  title="About StayPrivate | Secure communication for businesses and customers"
+  description="StayPrivate builds secure communication products for businesses and their customers, from document delivery to private two-way communication and controlled customer environments."
 >
   <main class="sp-home">
     <section class="sp-hero">
-      <div class="sp-container bespoke-grid">
+      <div class="sp-container about-hero-grid">
         <div>
           <p class="sp-kicker">About StayPrivate</p>
-
-          <h1>Making important information easier to manage</h1>
-
+          <h1>We design for both sides of the communication</h1>
           <p class="sp-hero-intro">
-            For more than 10 years, StayPrivate has helped
-            <span data-word="organizations">organisations</span> communicate,
-            share and manage information securely. Today that experience powers
-            Documentd, Keepd and our bespoke solutions.
+            StayPrivate builds products for important information moving between
+            organisations and their customers, with different products for different
+            levels of ownership, interaction and control.
           </p>
         </div>
 
-        <aside class="bespoke-panel about-panel">
-          <p class="panel-kicker">Experience</p>
-
-          <h2>
-            Trusted by <span data-word="organizations">organisations</span> for
-            secure communication
-          </h2>
-
-          <div class="about-product-list">
-            <div>
-              <strong>10+ years</strong>
-              <span>
-                Helping <span data-word="organizations">organisations</span>
-                communicate and manage information securely.
-              </span>
-            </div>
-
-            <div>
-              <strong>
-                1,000+ <span data-word="organizations">organisations</span> supported
-              </strong>
-              <span>
-                Across document delivery, private communication and information
-                management.
-              </span>
-            </div>
-
-            <div>
-              <strong>Documentd, Keepd and Bespoke</strong>
-              <span>
-                Three complementary ways to solve secure communication challenges.
-              </span>
-            </div>
+        <aside class="about-summary-panel">
+          <p class="about-panel-label">Our product family</p>
+          <div class="about-summary-list">
+            <div><strong>Documentd</strong><span>Important document delivery.</span></div>
+            <div><strong>StayPrivateMail</strong><span>Private two-way communication and file sharing.</span></div>
+            <div><strong>Secure Communications</strong><span>Company-controlled secure customer environments.</span></div>
+            <div><strong>Keepd</strong><span>The customer-facing environment used where customer ownership matters.</span></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="about-section">
-      <div class="sp-container about-grid">
+    <section class="about-section-block about-section-block--soft">
+      <div class="sp-container about-two-col">
         <div>
-          <p class="sp-kicker">Our mission</p>
-          <h2>Secure communication should be simple</h2>
+          <p class="sp-kicker">Why StayPrivate exists</p>
+          <h2>Important information crosses a boundary</h2>
         </div>
-
-        <div class="about-copy">
+        <div class="about-copy-block">
           <p>
-            Important information is increasingly sent and received online, but the
-            experience is often fragmented. Email is convenient but messy.
-            Traditional portals can be costly to manage and awkward for customers.
-            Secure file sharing can feel too technical for everyday use.
+            Businesses need to send documents, exchange sensitive information and
+            maintain secure customer relationships. But the right model is not always
+            the same.
           </p>
-
           <p>
-            StayPrivate brings secure delivery, storage and communication into
-            clearer, more usable systems for both
-            <span data-word="organizations">organisations</span> and the people
-            they serve.
+            Sometimes the customer should receive and own their copy. Sometimes both
+            sides need an ongoing private channel. And sometimes the organisation must
+            retain control of the entire environment.
+          </p>
+          <p>
+            StayPrivate is built around those distinctions, so businesses can choose
+            the model that fits the communication rather than forcing every use case
+            into one system.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="about-section">
-      <div class="sp-container about-grid">
-        <div>
-          <p class="sp-kicker">Our approach</p>
-          <h2>
-            Better for <span data-word="organizations">organisations</span> and
-            the people they serve
-          </h2>
+    <section class="about-section-block">
+      <div class="sp-container">
+        <div class="about-heading">
+          <p class="sp-kicker">Business products</p>
+          <h2>Three products with different roles</h2>
         </div>
 
-        <div class="about-copy">
-          <p>
-            StayPrivate's products are designed around a simple idea: secure
-            communication works best when it benefits both sides.
-          </p>
+        <div class="about-product-grid">
+          <article>
+            <p class="about-product-name">Documentd</p>
+            <h3>Deliver</h3>
+            <p>Give customers their own copy of important documents to keep without replacing existing systems.</p>
+            <a href="https://documentd.com">Explore Documentd <span>→</span></a>
+          </article>
 
+          <article>
+            <p class="about-product-name">StayPrivateMail</p>
+            <h3>Communicate</h3>
+            <p>Create a private two-way channel for messages and files while giving each customer their own Keepd.</p>
+            <a href={spmHref}>Explore StayPrivateMail <span>→</span></a>
+          </article>
+
+          <article>
+            <p class="about-product-name">StayPrivate Secure Communications</p>
+            <h3>Control</h3>
+            <p>Operate a dedicated secure customer environment owned and controlled by your organisation.</p>
+            <a href={secureCommHref}>Explore Secure Communications <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section-block about-keepd-section">
+      <div class="sp-container about-two-col">
+        <div>
+          <p class="sp-kicker">For individuals</p>
+          <h2>Keepd has a different role</h2>
+        </div>
+        <div class="about-copy-block">
           <p>
-            <span data-word="Organizations">Organisations</span> need reliable
-            ways to deliver important information. People need straightforward ways
-            to access, <span data-word="organize">organise</span> and find it
-            again later. That thinking shapes Documentd, Keepd and our bespoke
-            solutions.
+            Keepd is not another B2B product. It is the customer-facing private account
+            used by Documentd and StayPrivateMail where information should become the
+            customer's own to keep.
           </p>
+          <p>
+            That separation is deliberate. Businesses use StayPrivate products to
+            communicate; individuals use Keepd to receive and retain information that
+            belongs with them.
+          </p>
+          <a href="https://keepd.com" class="about-text-link">Explore Keepd <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section-block">
+      <div class="sp-container about-two-col">
+        <div>
+          <p class="sp-kicker">Bespoke</p>
+          <h2>And when the standard products are not enough</h2>
+        </div>
+        <div class="about-copy-block">
+          <p>
+            We also work with organisations whose requirements involve specialist
+            workflows, legacy systems or unusual integration needs. Bespoke is a
+            capability around the core product family rather than the centre of it.
+          </p>
+          <a href={bespokeHref} class="about-text-link">Explore Bespoke <span>→</span></a>
         </div>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .about-hero-grid,.about-two-col{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:clamp(3rem,7vw,7rem);align-items:start}
+  .about-summary-panel{padding:clamp(1.8rem,4vw,2.5rem);border:1px solid var(--sp-border);border-radius:28px;background:rgba(255,255,255,.85);box-shadow:0 28px 70px rgba(32,36,79,.1)}
+  .about-panel-label{margin:0 0 1rem;color:var(--sp-blue);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .about-summary-list{display:grid;gap:1px;overflow:hidden;border:1px solid var(--sp-border);border-radius:20px;background:var(--sp-border)}
+  .about-summary-list div{display:grid;gap:.3rem;padding:1rem 1.1rem;background:#fff}.about-summary-list strong{color:var(--sp-ink);font-family:Poppins,sans-serif}.about-summary-list span{color:var(--sp-muted);font-size:.94rem;line-height:1.55}
+  .about-section-block{padding-block:clamp(5rem,8vw,8rem)}.about-section-block--soft{background:rgba(255,255,255,.62)}
+  .about-two-col h2,.about-heading h2{margin:.4rem 0 1rem;color:var(--sp-ink);font-size:clamp(2rem,4vw,3rem);line-height:1.13;letter-spacing:-.04em}.about-copy-block{display:grid;gap:1rem}.about-copy-block p{margin:0;color:var(--sp-muted);line-height:1.75}
+  .about-heading{max-width:760px;margin-bottom:clamp(2.5rem,5vw,4rem)}.about-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}.about-product-grid article{display:flex;min-height:320px;flex-direction:column;padding:1.8rem;border:1px solid var(--sp-border);border-radius:22px;background:#fff}.about-product-name{margin:0;color:var(--sp-blue);font-size:.82rem;font-weight:700}.about-product-grid h3{margin:1rem 0 .6rem;color:var(--sp-ink);font-size:1.7rem}.about-product-grid article>p:last-of-type{margin:0;color:var(--sp-muted);line-height:1.7}.about-product-grid a,.about-text-link{display:inline-flex;gap:.5rem;margin-top:auto;padding-top:1.5rem;color:var(--sp-blue);font-family:Poppins,sans-serif;font-weight:600;text-decoration:none}.about-text-link{margin-top:.5rem;padding-top:0}.about-keepd-section{background:linear-gradient(135deg,rgba(83,21,145,.06),rgba(26,71,214,.04))}
+  @media(max-width:900px){.about-hero-grid,.about-two-col{grid-template-columns:1fr}.about-product-grid{grid-template-columns:1fr}.about-product-grid article{min-height:0}}
+</style>

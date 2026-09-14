@@ -1,0 +1,1070 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import { withBase } from "../lib/paths";
+
+const contactHref = withBase("/contact");
+const privacyHref = withBase("/terms/#PrivacyPolicy");
+
+const assuranceItems = [
+  "Information-security governance",
+  "ISO 27001 certification",
+  "Cyber Essentials Plus certification",
+  "Technical architecture",
+  "Encryption and access controls",
+  "Data protection",
+  "Sub-processors",
+  "Business continuity and disaster recovery",
+  "Vulnerability management",
+  "Incident management",
+  "Data retention and deletion",
+  "Integration and API security",
+];
+
+const dataProtectionItems = [
+  "Access to personal information",
+  "Retention and deletion",
+  "Security incidents",
+  "Supplier and sub-processor management",
+  "Risk assessment",
+  "Business continuity",
+  "Information-security training",
+  "Ongoing review of information-security controls",
+];
+---
+
+<BaseLayout
+  title="Trust & Security | StayPrivate"
+  description="Learn about StayPrivate's approach to security, privacy, independent assurance, resilience and customer ownership."
+>
+  <main class="sp-home">
+
+    <!-- Hero -->
+    <section class="sp-hero trust-hero">
+      <div class="sp-container trust-hero__inner">
+
+        <p class="sp-kicker">
+          Trust · Security · Privacy
+        </p>
+
+        <h1>
+          Built for important information
+        </h1>
+
+        <p class="sp-hero-intro trust-hero__intro">
+          StayPrivate has spent more than a decade building systems for
+          important communication and information. Security, privacy and
+          resilience are built into the way we design and operate our products
+          and Bespoke solutions.
+        </p>
+
+
+        <div class="trust-certifications">
+
+          <p class="trust-certifications__kicker">
+            Independently certified and assessed
+          </p>
+
+          <div class="trust-certifications__items">
+
+            <div>
+              <strong>
+                ISO 27001
+              </strong>
+
+              <span>
+                Information security management
+              </span>
+            </div>
+
+
+            <div>
+              <strong>
+                Cyber Essentials Plus
+              </strong>
+
+              <span>
+                Independently verified technical controls
+              </span>
+            </div>
+
+
+            <div>
+              <strong>
+                G-Cloud
+              </strong>
+
+              <span>
+                UK Government supplier
+              </span>
+            </div>
+
+          </div>
+
+          <p class="trust-certifications__summary">
+            StayPrivate operates an information security management system
+            independently certified to ISO 27001 and holds Cyber Essentials
+            Plus certification.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Trust pillars -->
+    <section class="trust-section">
+      <div class="sp-container">
+
+        <div class="trust-pillars">
+
+          <article class="trust-pillar">
+            <h2>
+              Security
+            </h2>
+
+            <p>
+              Layered technical and
+              <span data-word="organizational">organisational</span>
+              controls protect information throughout its lifecycle.
+            </p>
+          </article>
+
+
+          <article class="trust-pillar">
+            <h2>
+              Privacy
+            </h2>
+
+            <p>
+              Our services are built to provide the service required, not
+              around advertising, profiling or exploiting personal
+              information.
+            </p>
+          </article>
+
+
+          <article class="trust-pillar">
+            <h2>
+              Customer ownership
+            </h2>
+
+            <p>
+              Where customer ownership forms part of the solution, Keepd gives
+              individuals their own private place for the information they
+              receive.
+            </p>
+          </article>
+
+
+          <article class="trust-pillar">
+            <h2>
+              Resilience
+            </h2>
+
+            <p>
+              Our infrastructure and operational processes are designed to
+              protect important information and keep it available.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Security by design -->
+    <section class="trust-section trust-section--soft">
+      <div class="sp-container">
+
+        <div class="trust-heading trust-heading--center">
+
+          <p class="sp-kicker">
+            Security by design
+          </p>
+
+          <h2>
+            Protection throughout the information lifecycle
+          </h2>
+
+          <p>
+            Important information requires more than a secure login. We use
+            layered technical and operational controls across our systems and
+            processes.
+          </p>
+
+        </div>
+
+
+        <div class="trust-controls">
+
+          <article class="trust-control">
+
+            <h3>
+              Encryption
+            </h3>
+
+            <p>
+              Documents and sensitive information are encrypted in transit
+              and at rest using modern industry-standard encryption.
+            </p>
+
+          </article>
+
+
+          <article class="trust-control">
+
+            <h3>
+              Access control
+            </h3>
+
+            <p>
+              Access to systems and information is restricted according to
+              operational need and limited to
+              <span data-word="authorized">authorised</span>
+              personnel.
+            </p>
+
+          </article>
+
+
+          <article class="trust-control">
+
+            <h3>
+              Secure infrastructure
+            </h3>
+
+            <p>
+              Our products operate on professionally managed cloud
+              infrastructure designed for security, resilience and
+              scalability.
+            </p>
+
+          </article>
+
+
+          <article class="trust-control">
+
+            <h3>
+              Environment separation
+            </h3>
+
+            <p>
+              Production systems are separated from development environments,
+              with access and configuration governed through our
+              information-security processes.
+            </p>
+
+          </article>
+
+
+          <article class="trust-control">
+
+            <h3>
+              Monitoring and maintenance
+            </h3>
+
+            <p>
+              Systems and dependencies are monitored and maintained, with
+              security vulnerabilities assessed and addressed according to
+              risk.
+            </p>
+
+          </article>
+
+
+          <article class="trust-control">
+
+            <h3>
+              Operational controls
+            </h3>
+
+            <p>
+              Information-security governance, risk assessment, incident
+              management and ongoing review form part of how our services are
+              operated.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Assurance -->
+    <section class="trust-detail-section">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Independent assurance
+          </p>
+
+          <h2>
+            Security controls independently assessed
+          </h2>
+        </div>
+
+
+        <div class="trust-detail-copy">
+
+          <div class="trust-detail-item">
+            <h3>
+              ISO 27001
+            </h3>
+
+            <p>
+              StayPrivate operates an information security management system
+              certified to ISO 27001.
+            </p>
+
+            <p>
+              ISO 27001 provides a structured framework for identifying
+              information-security risks, implementing appropriate controls
+              and continually reviewing and improving those controls.
+            </p>
+          </div>
+
+
+          <div class="trust-detail-item">
+            <h3>
+              Cyber Essentials Plus
+            </h3>
+
+            <p>
+              StayPrivate also holds Cyber Essentials Plus certification.
+            </p>
+
+            <p>
+              Cyber Essentials Plus adds independent technical verification
+              to the Cyber Essentials framework, providing external assurance
+              that important technical protections are operating effectively.
+            </p>
+          </div>
+
+
+          <div class="trust-detail-item">
+            <h3>
+              Additional security testing
+            </h3>
+
+            <p>
+              We carry out additional internal security testing as part of the
+              ongoing development and operation of our products. This includes
+              targeted testing when systems, features or potential
+              vulnerabilities warrant further investigation.
+            </p>
+          </div>
+
+
+          <div class="trust-detail-item">
+            <h3>
+              G-Cloud supplier
+            </h3>
+
+            <p>
+              StayPrivate services are available through the UK Government's
+              G-Cloud framework, supporting procurement by public-sector
+              <span data-word="organizations">organisations</span>.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Privacy -->
+    <section class="trust-detail-section trust-detail-section--soft">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Privacy
+          </p>
+
+          <h2>
+            Built to provide the service, not to exploit the data
+          </h2>
+        </div>
+
+
+        <div class="trust-detail-copy">
+
+          <p class="trust-detail-lead">
+            StayPrivate's products are not built around advertising, profiling
+            or exploiting personal information. Information entrusted to our
+            services is used to provide and operate the services for which it
+            was supplied.
+          </p>
+
+          <p>
+            We aim to collect and retain only the information needed to provide
+            those services, operate them securely and meet our legal
+            obligations.
+          </p>
+
+          <a
+            href={privacyHref}
+            class="trust-text-link"
+          >
+            Read our Privacy Policy
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Customer ownership -->
+    <section class="trust-detail-section">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Customer ownership
+          </p>
+
+          <h2>
+            When information should belong with the individual
+          </h2>
+        </div>
+
+
+        <div class="trust-detail-copy">
+
+          <p class="trust-detail-lead">
+            StayPrivate designs for both sides of important communication.
+            Sometimes secure delivery or access is enough. In other cases,
+            customer ownership is part of the solution.
+          </p>
+
+          <p>
+            Documentd is built around that model. A business delivers an
+            important document and the recipient receives their own copy in
+            Keepd, their private place for the things they want to keep.
+          </p>
+
+          <p>
+            Businesses using Documentd do not gain access to the rest of a
+            recipient's Keepd. Documents from different
+            <span data-word="organizations">organisations</span>
+            can remain private to the individual.
+          </p>
+
+          <p>
+            Bespoke solutions also use Keepd where customer ownership is part
+            of the solution.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Resilience -->
+    <section class="trust-detail-section trust-detail-section--soft">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Resilience
+          </p>
+
+          <h2>
+            Designed for important information over time
+          </h2>
+        </div>
+
+
+        <div class="trust-detail-copy">
+
+          <p class="trust-detail-lead">
+            Important information may be needed long after it was first sent
+            or received, so our systems are designed around durability as well
+            as immediate communication.
+          </p>
+
+          <p>
+            Our systems incorporate backup, recovery and operational-resilience
+            measures intended to protect against loss and maintain
+            availability.
+          </p>
+
+          <p>
+            Risks affecting the confidentiality, integrity and availability of
+            information are regularly reviewed through our information
+            security management system.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Data protection -->
+    <section class="trust-detail-section">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Data protection
+          </p>
+
+          <h2>
+            Privacy built into how we operate
+          </h2>
+
+          <p class="trust-detail-side-copy">
+            Appropriate contractual and data-processing arrangements can be
+            put in place where StayPrivate processes personal information on
+            behalf of an
+            <span data-word="organization">organisation</span>.
+          </p>
+        </div>
+
+
+        <div>
+
+          <p class="trust-detail-lead">
+            Our information-security and data-protection processes cover areas
+            including:
+          </p>
+
+          <div class="trust-list">
+            {
+              dataProtectionItems.map((item) => (
+                <div class="trust-list__item">
+                  <span aria-hidden="true"></span>
+                  <p>{item}</p>
+                </div>
+              ))
+            }
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Enterprise assurance -->
+    <section class="trust-detail-section trust-detail-section--soft">
+      <div class="sp-container trust-detail-grid">
+
+        <div>
+          <p class="sp-kicker">
+            Enterprise assurance
+          </p>
+
+          <h2>
+            Supporting your due diligence
+          </h2>
+        </div>
+
+
+        <div>
+
+          <p class="trust-detail-lead">
+            <span data-word="Organizations">Organisations</span>
+            in regulated and security-sensitive industries may need to conduct
+            their own due diligence before using a StayPrivate product or
+            solution.
+          </p>
+
+          <p>
+            We can provide additional assurance information as part of an
+            appropriate enterprise evaluation.
+          </p>
+
+
+          <div class="trust-list trust-list--assurance">
+            {
+              assuranceItems.map((item) => (
+                <div class="trust-list__item">
+                  <span aria-hidden="true"></span>
+                  <p>{item}</p>
+                </div>
+              ))
+            }
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="trust-contact">
+      <div class="sp-container">
+
+        <div class="trust-contact__panel">
+
+          <div>
+            <p class="sp-kicker">
+              Security and due diligence
+            </p>
+
+            <h2>
+              Talk to us about your requirements
+            </h2>
+
+            <p>
+              If you are evaluating StayPrivate for a regulated or
+              security-sensitive use case, talk to us about security, privacy,
+              compliance, resilience or technical integration.
+            </p>
+          </div>
+
+
+          <a
+            href={contactHref}
+            class="sp-btn sp-btn-primary"
+          >
+            Contact us
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+
+
+<style>
+
+  /* Hero */
+
+  .trust-hero__inner {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .trust-hero__inner h1 {
+    max-width: 900px;
+    margin:
+      0.7rem
+      auto
+      0;
+    font-size: clamp(2.7rem, 5vw, 4.2rem);
+    line-height: 1.06;
+    letter-spacing: -0.045em;
+  }
+
+  .trust-hero__intro {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+
+  /* Certifications */
+
+  .trust-certifications {
+    display: grid;
+    gap: 1.5rem;
+    width: min(100%, 900px);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+    border-radius: 26px;
+    background: #20222c;
+    padding: clamp(2rem, 4vw, 2.75rem);
+    color: #fff;
+    box-shadow:
+      0 18px 45px
+      rgb(20 24 35 / 16%);
+  }
+
+  .trust-certifications__kicker {
+    margin: 0;
+    color: rgb(255 255 255 / 62%);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .trust-certifications__items {
+    display: grid;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .trust-certifications__items > div {
+    display: grid;
+    align-content: start;
+    gap: 0.35rem;
+    border-left:
+      1px solid
+      rgb(255 255 255 / 15%);
+    padding-inline: 1.25rem;
+  }
+
+  .trust-certifications__items
+    > div:first-child {
+    border-left: 0;
+  }
+
+  .trust-certifications__items strong {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .trust-certifications__items span {
+    color: rgb(255 255 255 / 65%);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .trust-certifications__summary {
+    max-width: 680px;
+    margin: 0 auto;
+    color: rgb(255 255 255 / 72%);
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+
+  /* Shared */
+
+  .trust-section {
+    padding-block: clamp(4.5rem, 7vw, 7rem);
+  }
+
+  .trust-section--soft,
+  .trust-detail-section--soft {
+    background: #fafafa;
+  }
+
+
+  /* Pillars */
+
+  .trust-pillars {
+    display: grid;
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .trust-pillar {
+    border-radius: 20px;
+    background: #fff;
+    padding: 1.75rem;
+    box-shadow:
+      0 10px 28px
+      rgb(25 30 40 / 5%);
+  }
+
+  .trust-pillar h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .trust-pillar p {
+    margin: 0.8rem 0 0;
+    color: var(--color-text-secondary, #5f6470);
+    font-size: 0.925rem;
+    line-height: 1.65;
+  }
+
+
+  /* Main section heading */
+
+  .trust-heading {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 780px;
+  }
+
+  .trust-heading--center {
+    justify-items: center;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .trust-heading h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .trust-heading > p:last-child {
+    margin: 0;
+    color: var(--color-text-secondary, #5f6470);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+
+  /* Security controls */
+
+  .trust-controls {
+    display: grid;
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .trust-control {
+    border-radius: 20px;
+    background: #fff;
+    padding: 1.75rem;
+    box-shadow:
+      0 8px 24px
+      rgb(25 30 40 / 4%);
+  }
+
+  .trust-control h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.35;
+  }
+
+  .trust-control p {
+    margin: 0.8rem 0 0;
+    color: var(--color-text-secondary, #5f6470);
+    font-size: 0.925rem;
+    line-height: 1.65;
+  }
+
+
+  /* Detailed sections */
+
+  .trust-detail-section {
+    padding-block: clamp(4.5rem, 7vw, 7rem);
+  }
+
+  .trust-detail-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 0.8fr)
+      minmax(0, 1.2fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+
+  .trust-detail-grid h2 {
+    margin: 0.5rem 0 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  .trust-detail-side-copy {
+    margin: 1.25rem 0 0;
+    color: var(--color-text-secondary, #5f6470);
+    line-height: 1.7;
+  }
+
+  .trust-detail-copy {
+    display: grid;
+  }
+
+  .trust-detail-copy > p {
+    margin: 0;
+    color: var(--color-text-secondary, #5f6470);
+    line-height: 1.7;
+  }
+
+  .trust-detail-copy > p + p {
+    margin-top: 1rem;
+  }
+
+  .trust-detail-lead {
+    margin: 0;
+    color: var(--color-text-secondary, #5f6470);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .trust-detail-item {
+    padding-block: 1.75rem;
+    border-top:
+      1px solid
+      rgb(20 25 35 / 10%);
+  }
+
+  .trust-detail-item:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .trust-detail-item:last-child {
+    padding-bottom: 0;
+  }
+
+  .trust-detail-item h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.35;
+  }
+
+  .trust-detail-item p {
+    margin: 0.8rem 0 0;
+    color: var(--color-text-secondary, #5f6470);
+    line-height: 1.7;
+  }
+
+
+  /* Links */
+
+  .trust-text-link {
+    justify-self: start;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .trust-text-link:hover {
+    text-decoration: underline;
+  }
+
+
+  /* Lists */
+
+  .trust-list {
+    display: grid;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap:
+      0.9rem
+      2rem;
+    margin-top: 2rem;
+  }
+
+  .trust-list__item {
+    display: grid;
+    grid-template-columns:
+      8px
+      1fr;
+    align-items: start;
+    gap: 0.75rem;
+  }
+
+  .trust-list__item > span {
+    width: 7px;
+    height: 7px;
+    margin-top: 0.55rem;
+    border-radius: 50%;
+    background: #252832;
+  }
+
+  .trust-list__item p {
+    margin: 0;
+    color: var(--color-text-secondary, #5f6470);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+
+  /* Contact */
+
+  .trust-contact {
+    padding-block:
+      clamp(4rem, 7vw, 6rem)
+      clamp(5rem, 8vw, 8rem);
+  }
+
+  .trust-contact__panel {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+    align-items: center;
+    gap: 3rem;
+    border-radius: 24px;
+    background: #f2edff;
+    padding: clamp(2rem, 5vw, 4rem);
+  }
+
+  .trust-contact__panel h2 {
+    margin: 0.5rem 0 1rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .trust-contact__panel
+    > div
+    > p:last-child {
+    max-width: 680px;
+    margin: 0;
+    color: var(--color-text-secondary, #5f6470);
+    line-height: 1.7;
+  }
+
+
+  /* Responsive */
+
+  @media (max-width: 980px) {
+
+    .trust-pillars {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+
+    .trust-controls {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+
+    .trust-detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+
+  @media (max-width: 720px) {
+
+    .trust-certifications__items,
+    .trust-pillars,
+    .trust-controls,
+    .trust-list {
+      grid-template-columns: 1fr;
+    }
+
+    .trust-certifications__items > div {
+      border-top:
+        1px solid
+        rgb(255 255 255 / 15%);
+      border-left: 0;
+      padding:
+        1rem
+        0
+        0;
+    }
+
+    .trust-certifications__items
+      > div:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .trust-contact__panel {
+      grid-template-columns: 1fr;
+    }
+
+    .trust-contact__panel
+      .sp-btn {
+      justify-self: start;
+    }
+
+  }
+
+</style>

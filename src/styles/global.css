@@ -891,3 +891,46 @@ span.sp-card-brand-name {
 span[data-word] {
   display: inline !important;
 }
+/* Portfolio footer refinement */
+@media (min-width: 901px) {
+  .sp-footer-grid {
+    grid-template-columns: 1.7fr 1fr 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.sp-footer-description--small {
+  max-width: 240px;
+  margin-top: 14px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* Shared inline CTA links */
+.sp-text-link,
+.sp-home-contact-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin-top: 1.25rem;
+  color: var(--sp-blue);
+  font-family: Poppins, Inter, system-ui, sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sp-text-link span,
+.sp-home-contact-cta span {
+  transition: transform .2s ease;
+}
+
+.sp-text-link:hover span,
+.sp-home-contact-cta:hover span {
+  transform: translateX(4px);
+}
+
+.sp-text-link:visited,
+.sp-home-contact-cta:visited {
+  color: var(--sp-blue);
+}

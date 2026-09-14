@@ -1,0 +1,856 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+
+const contactHref = withBase("/contact");
+const secureCommHref = withBase("/secure-comm");
+---
+
+<BaseLayout
+  title="StayPrivateMail | Private customer communication, file sharing and signing"
+  description="StayPrivateMail gives businesses and customers a private, branded way to exchange messages, files and signed documents through Keepd, existing email or an API."
+>
+  <main class="sp-home">
+    <section class="sp-hero product-page-hero">
+      <div class="sp-container product-page-grid">
+        <div>
+          <div class="product-brand-lockup">
+            <img src="../images/Documentd-Mark.svg" alt="" aria-hidden="true" />
+            <span>StayPrivateMail</span>
+          </div>
+
+          <h1>Private communication between your business and your customers</h1>
+          <p class="sp-hero-intro">
+            StayPrivateMail gives your <span data-word="organization">organisation</span> a private, branded way to exchange
+            messages, documents and signed agreements with customers.
+          </p>
+          <p class="product-hero-support">
+            Customers receive their own Keepd account, while your company users can
+            communicate from Keepd, from their existing email, or through your own
+            systems using the API.
+          </p>
+
+          <div class="sp-hero-actions">
+            <a href={contactHref} class="sp-btn sp-btn-primary">Talk to us</a>
+            <a href="https://app.keepd.com" class="sp-btn sp-btn-secondary">Log in</a>
+          </div>
+        </div>
+
+        <aside class="product-side-panel">
+          <p class="product-panel-label">One private customer channel</p>
+          <h2>Message, share, sign and keep</h2>
+          <div class="product-panel-list">
+            <div><strong>Private messages & files</strong><span>Keep sensitive information out of ordinary email attachments.</span></div>
+            <div><strong>Signing built in</strong><span>Request document completion or simple electronic acceptance.</span></div>
+            <div><strong>Keepd, email or API</strong><span>Use the workflow that already fits your <span data-word="organization">organisation</span>.</span></div>
+            <div><strong>Your branding</strong><span>Present the service as part of your own customer experience.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="product-section product-section--soft">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Why StayPrivateMail</p>
+          <h2>A private communications channel that works for both sides</h2>
+        </div>
+        <div class="product-copy">
+          <p>
+            Ordinary email is convenient, but messages and attachments can become
+            scattered across inboxes, downloads and forwarded conversations. Traditional
+            customer portals solve that by keeping information inside an environment
+            controlled by the business.
+          </p>
+          <p>
+            StayPrivateMail takes a different approach. Your business gets a secure,
+            branded communications channel, while your customer gets their own Keepd
+            account in which they can receive, send, sign and retain information shared
+            with your <span data-word="organization">organisation</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="sp-container">
+        <div class="product-heading">
+          <p class="sp-kicker">How it works</p>
+          <h2>Private communication without changing the way you work</h2>
+          <p>
+            Start from Keepd, your existing email system or your own applications. The
+            customer receives a private experience in Keepd and can respond securely.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <article>
+            <span>01</span>
+            <h3>Start the communication</h3>
+            <p>Send from Keepd, use your normal business email, or connect through the API.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Keep it private</h3>
+            <p>Messages and documents are handled through StayPrivateMail and Keepd rather than ordinary email attachments.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Let the customer respond</h3>
+            <p>Customers can reply, share files and complete signing requests from their own Keepd account.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Keep the relationship together</h3>
+            <p>Your company can access the shared customer vault while the customer retains their own private account.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section--soft">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">Ways to use StayPrivateMail</p>
+          <h2>Use Keepd, keep using email, or automate through the API</h2>
+          <p>
+            StayPrivateMail does not force every user into a new workflow. Your team can
+            use the application directly, work from ordinary email, or integrate secure
+            communication into your own systems.
+          </p>
+        </div>
+
+        <div class="usage-grid">
+          <article>
+            <h3>Send directly from Keepd</h3>
+            <p>
+              Company users have access to the Keepd application and can send private
+              messages, documents and signing requests directly from the shared customer
+              relationship.
+            </p>
+          </article>
+
+          <article class="usage-grid__email">
+            <h3>Use the email system you already have</h3>
+            <p>
+              Send from your normal business email and add a simple instruction to tell
+              StayPrivateMail what you want to happen.
+            </p>
+            <div class="command-list" aria-label="StayPrivateMail email commands">
+              <div><code>#private</code><span>Send a private message or file</span></div>
+              <div><code>#sign</code><span>Ask the customer to complete or sign a document</span></div>
+              <div><code>#esign</code><span>Ask the customer to accept or reject a document</span></div>
+              <div><code>#deliver</code><span>Deliver a document for the customer to keep</span></div>
+            </div>
+          </article>
+
+          <article>
+            <h3>Connect your own applications</h3>
+            <p>
+              Use the API to build private messages, document delivery and customer
+              communication into your own applications and automated workflows.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section signing-section">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Signing built in</p>
+          <h2>Simple signing for everyday customer documents</h2>
+          <p class="signing-intro">
+            StayPrivateMail includes lightweight signing tools for situations where you
+            do not need a separate heavyweight signing platform.
+          </p>
+        </div>
+
+        <div class="signing-cards">
+          <article>
+            <p class="product-panel-label">Document signing</p>
+            <h3>Add signatures, dates and text</h3>
+            <p>
+              Customers can open PDFs, Word documents and similar files, add a signature,
+              date or text wherever required, and reply with the updated document attached.
+            </p>
+          </article>
+          <article>
+            <p class="product-panel-label">Electronic acceptance</p>
+            <h3>Accept or reject the document</h3>
+            <p>
+              For documents that only require an explicit decision, customers can accept
+              or reject the contents as presented. The response records device and IP
+              information as part of the audit record.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-branding-section">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Your customer experience</p>
+          <h2>Your communication, your brand</h2>
+        </div>
+        <div class="product-copy">
+          <p>
+            StayPrivateMail uses your <span data-word="organization">organisation</span>'s branding so customers can clearly
+            see who the communication is from. The experience is designed to feel like
+            part of your customer relationship rather than an anonymous third-party file
+            sharing service.
+          </p>
+          <p>
+            Company users can work from Keepd's shared customer vault, while customers
+            use their own Keepd account to receive and retain the information exchanged
+            with your <span data-word="organization">organisation</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="product-section pricing-section">
+      <div class="sp-container">
+        <div class="pricing-heading-row">
+          <div class="product-heading">
+            <p class="sp-kicker">Pricing</p>
+            <h2>Priced by customer relationship, not by user</h2>
+            <p>
+              There is no per-user charge and no limit on the number of documents. You
+              pay according to the number of customers your <span data-word="organization">organisation</span> has communicated
+              with through StayPrivateMail during the previous 12 months.
+            </p>
+          </div>
+
+          <div class="currency-switcher" aria-label="Choose currency">
+            <button type="button" data-spm-currency="GBP">GBP</button>
+            <button type="button" data-spm-currency="EUR">EUR</button>
+            <button type="button" data-spm-currency="USD">USD</button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card pricing-card--primary">
+            <p class="pricing-card__label">StayPrivateMail</p>
+            <div class="pricing-card__price"><span data-price="spm_base">£20</span><small>/ month</small></div>
+            <p class="pricing-card__lead">Includes up to 100 active customers and 10 GB storage.</p>
+            <ul>
+              <li>Unlimited company users</li>
+              <li>No limit on the number of documents</li>
+              <li>Private messages and file sharing</li>
+              <li>Document signing and electronic acceptance</li>
+              <li>Email integration</li>
+              <li>API access</li>
+              <li>Your <span data-word="organization">organisation</span>'s branding</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card">
+            <p class="pricing-card__label">Need more capacity?</p>
+            <div class="pricing-card__price"><span data-price="spm_extra">£7.50</span><small>/ month</small></div>
+            <p class="pricing-card__lead">Each additional unit adds:</p>
+            <div class="capacity-pair">
+              <div><strong>50</strong><span>more active customers</span></div>
+              <div><strong>10 GB</strong><span>more storage</span></div>
+            </div>
+            <p class="pricing-card__note">
+              Capacity is added in simple units, so storage grows alongside the number of
+              customer relationships you need to support.
+            </p>
+          </article>
+        </div>
+
+        <div class="active-customer-note">
+          <strong>What is an active customer?</strong>
+          <p>
+            Anyone outside your <span data-word="organization">organisation</span> with whom there has been communication
+            through StayPrivateMail during the previous 12 months. Company users do not
+            count towards your customer allowance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section comparison-section">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">Choosing the right StayPrivate product</p>
+          <h2>Document delivery, an ongoing private relationship, or complete company control?</h2>
+        </div>
+
+        <div class="comparison-grid">
+          <article>
+            <p class="comparison-grid__eyebrow">Deliver</p>
+            <h3>Documentd</h3>
+            <p>Best when the main requirement is to deliver important documents that customers should own and retain.</p>
+            <a href="https://documentd.com" class="sp-text-link">Explore Documentd <span>→</span></a>
+          </article>
+          <article class="comparison-grid__current">
+            <p class="comparison-grid__eyebrow">Communicate</p>
+            <h3>StayPrivateMail</h3>
+            <p>Best for an ongoing private relationship where both sides exchange messages, files and signed documents and the customer keeps their own Keepd.</p>
+          </article>
+          <article>
+            <p class="comparison-grid__eyebrow">Control</p>
+            <h3>Secure Communications</h3>
+            <p>Best when the <span data-word="organization">organisation</span> needs to own and control the whole secure customer environment.</p>
+            <a href={secureCommHref} class="sp-text-link">Explore Secure Communications <span>→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cta-section">
+      <div class="sp-container product-cta-card">
+        <div>
+          <p class="sp-kicker">StayPrivateMail</p>
+          <h2>Need a private channel for ongoing customer communication?</h2>
+          <p>
+            Talk to us about how StayPrivateMail can fit alongside your existing email,
+            customer systems and workflows.
+          </p>
+        </div>
+        <a href={contactHref} class="sp-text-link sp-home-contact-cta">Contact us <span>→</span></a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const currencyButtons = Array.from(document.querySelectorAll("[data-spm-currency]"));
+
+  function updateCurrencyButtons(currency) {
+    currencyButtons.forEach((button) => {
+      const active = button.dataset.spmCurrency === currency;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  currencyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const currency = button.dataset.spmCurrency;
+      if (!currency) return;
+      window.setStayPrivateCurrency?.(currency);
+      updateCurrencyButtons(currency);
+    });
+  });
+
+  window.addEventListener("sp:currency-ready", (event) => {
+    updateCurrencyButtons(event.detail?.currency || "GBP");
+  });
+
+  updateCurrencyButtons(document.documentElement.dataset.currency || "GBP");
+</script>
+
+<style>
+  .product-page-grid,
+  .product-two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+
+  .product-brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: 1.15rem;
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .product-brand-lockup img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .product-hero-support,
+  .product-copy p,
+  .product-cta-card p,
+  .product-heading > p:last-child,
+  .signing-intro {
+    color: var(--sp-muted);
+    line-height: 1.75;
+  }
+
+  .product-hero-support {
+    max-width: 700px;
+    margin: 1.25rem 0 0;
+  }
+
+  .product-side-panel {
+    padding: clamp(1.8rem, 4vw, 2.6rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .84);
+    box-shadow: 0 28px 70px rgba(32, 36, 79, .1);
+  }
+
+  .product-panel-label,
+  .comparison-grid__eyebrow {
+    margin: 0 0 .75rem;
+    color: var(--sp-blue);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .product-side-panel h2,
+  .product-two-col h2,
+  .product-heading h2,
+  .product-cta-card h2 {
+    margin: .4rem 0 1rem;
+    color: var(--sp-ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.13;
+    letter-spacing: -.04em;
+  }
+
+  .product-panel-list {
+    display: grid;
+    gap: 1px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--sp-border);
+    border-radius: 20px;
+    background: var(--sp-border);
+  }
+
+  .product-panel-list div {
+    display: grid;
+    gap: .3rem;
+    padding: 1.1rem 1.2rem;
+    background: #fff;
+  }
+
+  .product-panel-list strong {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+  }
+
+  .product-panel-list span {
+    color: var(--sp-muted);
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .product-section {
+    padding-block: clamp(5rem, 8vw, 8rem);
+  }
+
+  .product-section--soft {
+    background: rgba(255, 255, 255, .62);
+  }
+
+  .product-copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .product-copy p,
+  .product-heading > p:last-child,
+  .signing-intro {
+    margin: 0;
+  }
+
+  .product-heading {
+    max-width: 780px;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .product-heading--wide {
+    max-width: 900px;
+  }
+
+  .workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .workflow-grid article,
+  .usage-grid article,
+  .signing-cards article,
+  .comparison-grid article {
+    padding: 1.7rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 22px;
+    background: #fff;
+  }
+
+  .workflow-grid > article > span {
+    display: block;
+    margin-bottom: .7rem;
+    color: var(--sp-blue);
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  .workflow-grid h3,
+  .usage-grid h3,
+  .signing-cards h3,
+  .comparison-grid h3 {
+    margin: 0 0 .7rem;
+    color: var(--sp-ink);
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .workflow-grid p,
+  .usage-grid p,
+  .signing-cards p,
+  .comparison-grid p {
+    margin: 0;
+    color: var(--sp-muted);
+    line-height: 1.7;
+  }
+
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .usage-grid__email {
+    grid-column: span 1;
+  }
+
+  .command-list {
+    display: grid;
+    gap: .7rem;
+    margin-top: 1.4rem;
+  }
+
+  .command-list > div {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: .8rem;
+    align-items: start;
+  }
+
+  .command-list code {
+    width: fit-content;
+    padding: .25rem .5rem;
+    border-radius: 8px;
+    background: rgba(26, 71, 214, .08);
+    color: var(--sp-blue);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .82rem;
+    font-weight: 700;
+  }
+
+  .command-list span {
+    color: var(--sp-muted);
+    font-size: .92rem;
+    line-height: 1.5;
+  }
+
+  .signing-section {
+    background: linear-gradient(135deg, rgba(83, 21, 145, .06), rgba(26, 71, 214, .04));
+  }
+
+  .signing-intro {
+    max-width: 650px;
+    margin-top: 1rem;
+  }
+
+  .signing-cards {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .signing-cards article {
+    background: rgba(255, 255, 255, .9);
+  }
+
+  .product-branding-section {
+    background: rgba(255, 255, 255, .58);
+  }
+
+  .pricing-section {
+    background: linear-gradient(180deg, rgba(247, 248, 253, .8), rgba(255, 255, 255, .95));
+  }
+
+  .pricing-heading-row {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .pricing-heading-row .product-heading {
+    margin-bottom: 0;
+  }
+
+  .currency-switcher {
+    display: inline-flex;
+    gap: .25rem;
+    padding: .3rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(32, 36, 79, .06);
+  }
+
+  .currency-switcher button {
+    min-width: 56px;
+    padding: .55rem .75rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--sp-muted);
+    cursor: pointer;
+    font: 600 .78rem/1 Poppins, sans-serif;
+  }
+
+  .currency-switcher button.is-active {
+    background: var(--sp-ink);
+    color: #fff;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .pricing-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1.8rem, 4vw, 2.5rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, .96);
+    box-shadow: 0 20px 50px rgba(32, 36, 79, .07);
+  }
+
+  .pricing-card--primary {
+    border-color: rgba(26, 71, 214, .24);
+    background:
+      radial-gradient(circle at 100% 0%, rgba(26, 71, 214, .09), transparent 38%),
+      #fff;
+    box-shadow: 0 24px 60px rgba(26, 71, 214, .10);
+  }
+
+  .pricing-card--primary::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sp-blue), var(--sp-purple));
+  }
+
+  .pricing-card__label {
+    display: inline-flex;
+    width: fit-content;
+    margin: 0 0 1rem;
+    padding: .42rem .7rem;
+    border: 1px solid rgba(26, 71, 214, .13);
+    border-radius: 999px;
+    background: rgba(26, 71, 214, .05);
+    color: var(--sp-blue);
+    font-family: Poppins, sans-serif;
+    font-size: .76rem;
+    font-weight: 700;
+  }
+
+  .pricing-card__price {
+    display: flex;
+    gap: .6rem;
+    align-items: baseline;
+    color: var(--sp-ink);
+  }
+
+  .pricing-card__price > span {
+    font-family: Poppins, sans-serif;
+    font-size: clamp(2.7rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -.055em;
+    line-height: 1;
+  }
+
+  .pricing-card__price small {
+    color: var(--sp-muted);
+    font-size: .9rem;
+  }
+
+  .pricing-card__lead,
+  .pricing-card__note {
+    color: var(--sp-muted);
+    line-height: 1.65;
+  }
+
+  .pricing-card__lead {
+    margin: 1.15rem 0 1.4rem;
+  }
+
+  .pricing-card ul {
+    display: grid;
+    gap: .7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pricing-card li {
+    position: relative;
+    padding-left: 1.45rem;
+    color: var(--sp-muted);
+    line-height: 1.55;
+  }
+
+  .pricing-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sp-blue);
+    font-weight: 700;
+  }
+
+  .capacity-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .8rem;
+    margin: 1.1rem 0 1.4rem;
+  }
+
+  .capacity-pair div {
+    display: grid;
+    gap: .2rem;
+    padding: 1rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 16px;
+    background: rgba(247, 248, 253, .7);
+  }
+
+  .capacity-pair strong {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .capacity-pair span {
+    color: var(--sp-muted);
+    font-size: .85rem;
+    line-height: 1.45;
+  }
+
+  .pricing-card__note {
+    margin: 0;
+  }
+
+  .active-customer-note {
+    display: grid;
+    grid-template-columns: minmax(180px, .35fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding: 1.45rem 1.6rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 20px;
+    background: rgba(247, 248, 253, .88);
+  }
+
+  .active-customer-note strong {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+  }
+
+  .active-customer-note p {
+    margin: 0;
+    color: var(--sp-muted);
+    line-height: 1.65;
+  }
+
+  .comparison-section {
+    background: rgba(255, 255, 255, .7);
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .comparison-grid__current {
+    border-color: rgba(26, 71, 214, .28) !important;
+    background: linear-gradient(180deg, rgba(26, 71, 214, .045), #fff) !important;
+  }
+
+  .comparison-grid .sp-text-link {
+    margin-top: 1.1rem;
+  }
+
+  .product-cta-section {
+    padding: clamp(4rem, 7vw, 7rem) 0;
+  }
+
+  .product-cta-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(32, 36, 79, .08);
+  }
+
+  .product-cta-card > div {
+    max-width: 760px;
+  }
+
+  @media (max-width: 1020px) {
+    .workflow-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .usage-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .product-page-grid,
+    .product-two-col,
+    .pricing-grid,
+    .comparison-grid,
+    .active-customer-note {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-heading-row {
+      flex-direction: column;
+    }
+
+    .product-cta-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .workflow-grid,
+    .capacity-pair {
+      grid-template-columns: 1fr;
+    }
+
+    .currency-switcher {
+      width: 100%;
+    }
+
+    .currency-switcher button {
+      flex: 1;
+    }
+  }
+</style>

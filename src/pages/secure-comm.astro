@@ -1,0 +1,863 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/paths";
+
+const contactHref = withBase("/contact");
+const spmHref = withBase("/stayprivatemail");
+const bespokeHref = withBase("/bespoke");
+---
+
+<BaseLayout
+  title="StayPrivate Secure Communications | Company-controlled secure customer environments"
+  description="StayPrivate Secure Communications gives organisations their own branded secure environment for customer messaging, file sharing, signing and controlled access."
+>
+  <main class="sp-home">
+    <section class="sp-hero product-page-hero">
+      <div class="sp-container product-page-grid">
+        <div>
+          <div class="product-brand-lockup">
+            <img src="../images/Documentd-Mark.svg" alt="" aria-hidden="true" />
+            <span>StayPrivate Secure Communications</span>
+          </div>
+
+          <h1>A secure customer environment your <span data-word="organization">organisation</span> controls</h1>
+          <p class="sp-hero-intro">
+            StayPrivate Secure Communications gives your <span data-word="organization">organisation</span>
+            its own private, branded environment for communicating with customers,
+            sharing documents and managing sensitive information.
+          </p>
+          <p class="product-hero-support">
+            Your environment runs at an address such as <code>company-name.secure-comm.com</code>
+            and can be accessed through the web or the Secure Portal app on iOS and Android.
+          </p>
+
+          <div class="sp-hero-actions">
+            <a href={contactHref} class="sp-btn sp-btn-primary">Talk to us</a>
+          </div>
+        </div>
+
+        <aside class="product-side-panel">
+          <p class="product-panel-label">Company controlled</p>
+          <h2>Control the environment, not just the message</h2>
+          <div class="product-panel-list">
+            <div><strong>Your environment</strong><span>A dedicated secure space for your company and its customers.</span></div>
+            <div><strong>Your branding</strong><span>The whole application is presented using your <span data-word="colors">colours</span> and identity.</span></div>
+            <div><strong>Your user structure</strong><span>Admins, superadmins and controllers support management and oversight.</span></div>
+            <div><strong>Your workflows</strong><span>Use the portal, email commands or API integration.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="product-section product-section--soft">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Why Secure Communications</p>
+          <h2>Some customer relationships need a stronger boundary</h2>
+        </div>
+        <div class="product-copy">
+          <p>
+            StayPrivateMail is designed around a shared relationship in which the customer
+            has their own Keepd account. Secure Communications uses a different model.
+          </p>
+          <p>
+            The customer participates inside an environment owned and controlled by your
+            <span data-word="organization"> organisation</span>. Your company determines who is set up,
+            who can manage them, how the environment is branded and how access is governed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">How it works</p>
+          <h2>Your own secure environment, available on web and mobile</h2>
+          <p>
+            Each implementation is self-contained within its own Secure Communications
+            environment, while still supporting the flexible communication tools available
+            across StayPrivate.
+          </p>
+        </div>
+
+        <div class="workflow-grid">
+          <article>
+            <span>01</span>
+            <h3>Your environment is created</h3>
+            <p>Your company receives its own secure address, such as <code>company-name.secure-comm.com</code>.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Admins create users</h3>
+            <p>New users are set up by an admin or superadmin rather than signing themselves up independently.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Users communicate securely</h3>
+            <p>Staff and customers can exchange messages, files and signing requests inside the controlled environment.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Your <span data-word="organization">organisation</span> retains oversight</h3>
+            <p>Administrative and controller roles support user management, compliance monitoring and operational control.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section--soft">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">Ways to use Secure Communications</p>
+          <h2>Use the secure portal, your existing email, or your own systems</h2>
+          <p>
+            Secure Communications supports the same flexible sending options as StayPrivateMail,
+            while keeping the customer relationship inside your company's controlled environment.
+          </p>
+        </div>
+
+        <div class="usage-grid">
+          <article>
+            <h3>Use the secure portal</h3>
+            <p>
+              Users can sign in at your dedicated <code>secure-comm.com</code> address or use
+              the Secure Portal app on iOS or Android to send messages, share files and work
+              with customer communications directly.
+            </p>
+          </article>
+
+          <article class="usage-grid__email">
+            <h3>Keep using normal business email</h3>
+            <p>
+              Send from your existing email system and add a simple instruction to choose
+              how the communication should be handled.
+            </p>
+            <div class="command-list" aria-label="Secure Communications email commands">
+              <div><code>#private</code><span>Send a private message or file</span></div>
+              <div><code>#sign</code><span>Ask the customer to complete or sign a document</span></div>
+              <div><code>#esign</code><span>Ask the customer to accept or reject a document</span></div>
+              <div><code>#deliver</code><span>Deliver a document securely</span></div>
+            </div>
+          </article>
+
+          <article>
+            <h3>Connect your own applications</h3>
+            <p>
+              Use the API to integrate secure communication, document delivery and customer
+              workflows directly into your own systems and processes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section governance-section">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">Control and governance</p>
+          <h2>Different roles for management, administration and oversight</h2>
+          <p>
+            Secure Communications is designed for <span data-word="organizations">organisations</span> that need more than ordinary
+            user access. Administrative responsibilities can be divided while compliance teams
+            retain the oversight they need.
+          </p>
+        </div>
+
+        <div class="role-grid">
+          <article>
+            <p class="product-panel-label">Admin</p>
+            <h3>Manage your own users</h3>
+            <p>
+              Admins can create and manage the users set up beneath them, including routine
+              account management such as password resets.
+            </p>
+          </article>
+          <article class="role-grid__primary">
+            <p class="product-panel-label">Superadmin</p>
+            <h3>Manage the whole environment</h3>
+            <p>
+              The superadmin sits above the administrator structure and can manage every user
+              across the company's Secure Communications environment.
+            </p>
+          </article>
+          <article>
+            <p class="product-panel-label">Controller</p>
+            <h3>Support compliance monitoring</h3>
+            <p>
+              Controller users provide a dedicated role for monitoring and oversight where
+              compliance or supervisory access is required.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section signing-section product-section--soft">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Signing built in</p>
+          <h2>Simple signing inside the same secure environment</h2>
+          <p class="signing-intro">
+            Secure Communications includes the same lightweight document signing and
+            electronic acceptance tools as StayPrivateMail.
+          </p>
+        </div>
+
+        <div class="signing-cards">
+          <article>
+            <p class="product-panel-label">Document signing</p>
+            <h3>Add signatures, dates and text</h3>
+            <p>
+              Customers can open PDFs, Word documents and similar files, add a signature,
+              date or text wherever required, and return the updated document securely.
+            </p>
+          </article>
+          <article>
+            <p class="product-panel-label">Electronic acceptance</p>
+            <h3>Accept or reject the document</h3>
+            <p>
+              For documents that require an explicit decision, customers can accept or reject
+              the contents as presented. The response records device and IP information as
+              part of the audit record.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-branding-section">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Your customer experience</p>
+          <h2>Your secure environment looks and feels like your own</h2>
+        </div>
+        <div class="product-copy">
+          <p>
+            Branding in Secure Communications goes beyond individual messages. The whole
+            customer environment is branded around your <span data-word="organization">organisation</span>,
+            including its <span data-word="colors">colours</span> and visual identity.
+          </p>
+          <p>
+            Customers access a dedicated environment associated with your company rather
+            than a shared consumer-facing account, reinforcing both trust and the company's
+            control of the relationship.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="product-section pricing-section">
+      <div class="sp-container">
+        <div class="pricing-heading-row">
+          <div class="product-heading">
+            <p class="sp-kicker">Pricing</p>
+            <h2>Simple pricing based on company users</h2>
+            <p>
+              Secure Communications starts with two company users. Each licensed user includes
+              capacity for up to 50 customers and 10 GB of storage.
+            </p>
+          </div>
+
+          <div class="currency-switcher" aria-label="Choose currency">
+            <button type="button" data-sc-currency="GBP">GBP</button>
+            <button type="button" data-sc-currency="EUR">EUR</button>
+            <button type="button" data-sc-currency="USD">USD</button>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card pricing-card--primary">
+            <p class="pricing-card__label">Secure Communications</p>
+            <div class="pricing-card__price"><span data-price="sc_base">£40</span><small>/ month</small></div>
+            <p class="pricing-card__lead">Includes 2 company users.</p>
+            <ul>
+              <li>Up to 50 customers per company user</li>
+              <li>10 GB storage per company user</li>
+              <li>Secure messaging and file sharing</li>
+              <li>Document signing and electronic acceptance</li>
+              <li>Email integration</li>
+              <li>API access</li>
+              <li>Fully branded secure environment</li>
+              <li>Admin, superadmin and controller roles</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card">
+            <p class="pricing-card__label">Additional company users</p>
+            <div class="pricing-card__price"><span data-price="sc_extra">£15</span><small>/ user / month</small></div>
+            <p class="pricing-card__lead">Each additional user adds:</p>
+            <div class="capacity-pair">
+              <div><strong>50</strong><span>customer capacity</span></div>
+              <div><strong>10 GB</strong><span>storage</span></div>
+            </div>
+            <p class="pricing-card__note">
+              Add users as your team and customer base grow. Each user brings their own
+              customer and storage capacity with them.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section comparison-section">
+      <div class="sp-container">
+        <div class="product-heading product-heading--wide">
+          <p class="sp-kicker">Compared with StayPrivateMail</p>
+          <h2>The difference is who owns the environment</h2>
+        </div>
+
+        <div class="comparison-grid comparison-grid--two">
+          <article>
+            <p class="comparison-grid__eyebrow">Communicate</p>
+            <h3>StayPrivateMail</h3>
+            <p>
+              Best for an ongoing private relationship where the customer has their own
+              Keepd account and can retain information independently of the business.
+            </p>
+            <a href={spmHref} class="sp-text-link">Explore StayPrivateMail <span>→</span></a>
+          </article>
+          <article class="comparison-grid__current">
+            <p class="comparison-grid__eyebrow">Control</p>
+            <h3>Secure Communications</h3>
+            <p>
+              Best when the <span data-word="organization">organisation</span> needs to own and control
+              the whole customer environment, including users, access, branding and oversight.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section product-section--soft">
+      <div class="sp-container product-two-col">
+        <div>
+          <p class="sp-kicker">Need something more specialised?</p>
+          <h2>Secure Communications can also form the foundation for bespoke work</h2>
+        </div>
+        <div class="product-copy">
+          <p>
+            If your requirements involve unusual integrations, specialist workflows or
+            additional controls, we can adapt StayPrivate technology around the way your
+            <span data-word="organization"> organisation</span> already works.
+          </p>
+          <a href={bespokeHref} class="sp-text-link">Explore Bespoke <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-cta-section">
+      <div class="sp-container product-cta-card">
+        <div>
+          <p class="sp-kicker">StayPrivate Secure Communications</p>
+          <h2>Need a secure customer environment that remains under your control?</h2>
+          <p>
+            Talk to us about your users, customer workflows, governance requirements and
+            how you want the environment to work.
+          </p>
+        </div>
+        <a href={contactHref} class="sp-text-link sp-home-contact-cta">Contact us <span>→</span></a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const currencyButtons = Array.from(document.querySelectorAll("[data-sc-currency]"));
+
+  function updateCurrencyButtons(currency) {
+    currencyButtons.forEach((button) => {
+      const active = button.dataset.scCurrency === currency;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  currencyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const currency = button.dataset.scCurrency;
+      if (!currency) return;
+      window.setStayPrivateCurrency?.(currency);
+      updateCurrencyButtons(currency);
+    });
+  });
+
+  window.addEventListener("sp:currency-ready", (event) => {
+    updateCurrencyButtons(event.detail?.currency || "GBP");
+  });
+
+  updateCurrencyButtons(document.documentElement.dataset.currency || "GBP");
+</script>
+
+<style>
+  .product-page-grid,
+  .product-two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+
+  .product-brand-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: 1.15rem;
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .product-brand-lockup img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+
+  .product-hero-support,
+  .product-copy p,
+  .product-cta-card p,
+  .product-heading > p:last-child,
+  .signing-intro {
+    color: var(--sp-muted);
+    line-height: 1.75;
+  }
+
+  .product-hero-support {
+    max-width: 700px;
+    margin: 1.25rem 0 0;
+  }
+
+  code {
+    font-size: .92em;
+  }
+
+  .product-side-panel {
+    padding: clamp(1.8rem, 4vw, 2.6rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, .84);
+    box-shadow: 0 28px 70px rgba(32, 36, 79, .1);
+  }
+
+  .product-panel-label,
+  .comparison-grid__eyebrow {
+    margin: 0 0 .75rem;
+    color: var(--sp-blue);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .product-side-panel h2,
+  .product-two-col h2,
+  .product-heading h2,
+  .product-cta-card h2 {
+    margin: .4rem 0 1rem;
+    color: var(--sp-ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.13;
+    letter-spacing: -.04em;
+  }
+
+  .product-panel-list {
+    display: grid;
+    gap: 1px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--sp-border);
+    border-radius: 20px;
+    background: var(--sp-border);
+  }
+
+  .product-panel-list > div {
+    display: grid;
+    gap: .3rem;
+    padding: 1.1rem 1.2rem;
+    background: #fff;
+  }
+
+  .product-panel-list strong {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+  }
+
+  .product-panel-list span {
+    color: var(--sp-muted);
+    font-size: .94rem;
+    line-height: 1.55;
+  }
+
+  .product-section {
+    padding-block: clamp(5rem, 8vw, 8rem);
+  }
+
+  .product-section--soft {
+    background: rgba(255, 255, 255, .62);
+  }
+
+  .product-copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .product-copy p {
+    margin: 0;
+  }
+
+  .product-heading {
+    max-width: 760px;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .product-heading--wide {
+    max-width: 850px;
+  }
+
+  .product-heading > p:last-child {
+    margin: 0;
+  }
+
+  .workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .workflow-grid article,
+  .usage-grid article,
+  .role-grid article,
+  .signing-cards article,
+  .comparison-grid article {
+    padding: 1.7rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 22px;
+    background: #fff;
+  }
+
+  .workflow-grid > article > span {
+    color: var(--sp-blue);
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  .workflow-grid h3,
+  .usage-grid h3,
+  .role-grid h3,
+  .signing-cards h3,
+  .comparison-grid h3 {
+    margin: .55rem 0 .7rem;
+    color: var(--sp-ink);
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .workflow-grid p,
+  .usage-grid p,
+  .role-grid p,
+  .signing-cards p,
+  .comparison-grid p {
+    margin: 0;
+    color: var(--sp-muted);
+    line-height: 1.7;
+  }
+
+  .usage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: start;
+  }
+
+  .usage-grid__email {
+    grid-row: span 2;
+  }
+
+  .command-list {
+    display: grid;
+    gap: .6rem;
+    margin-top: 1.35rem;
+  }
+
+  .command-list > div {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: .75rem;
+    align-items: center;
+    padding: .8rem .9rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 14px;
+    background: var(--sp-bg);
+  }
+
+  .command-list code {
+    color: var(--sp-blue);
+    font-weight: 700;
+  }
+
+  .command-list span {
+    color: var(--sp-muted);
+    font-size: .9rem;
+    line-height: 1.45;
+  }
+
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .role-grid__primary {
+    border-color: rgba(26, 71, 214, .28) !important;
+    background: linear-gradient(180deg, rgba(26, 71, 214, .055), #fff) !important;
+  }
+
+  .signing-cards {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .signing-intro {
+    margin: 1rem 0 0;
+  }
+
+  .product-branding-section {
+    background: linear-gradient(135deg, rgba(26, 71, 214, .06), rgba(83, 21, 145, .04));
+  }
+
+  .pricing-section {
+    background: rgba(255, 255, 255, .55);
+  }
+
+  .pricing-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .currency-switcher {
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: .25rem;
+    padding: .3rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 999px;
+    background: #fff;
+  }
+
+  .currency-switcher button {
+    min-width: 54px;
+    padding: .55rem .75rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--sp-muted);
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .currency-switcher button.is-active {
+    background: var(--sp-blue);
+    color: #fff;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  .pricing-card {
+    position: relative;
+    padding: clamp(1.8rem, 4vw, 2.3rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 24px;
+    background: #fff;
+    box-shadow: 0 18px 45px rgba(32, 36, 79, .055);
+  }
+
+  .pricing-card--primary {
+    border-color: rgba(26, 71, 214, .28);
+    background: linear-gradient(180deg, rgba(26, 71, 214, .035), #fff 42%);
+  }
+
+  .pricing-card--primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 22px;
+    right: 22px;
+    height: 3px;
+    border-radius: 0 0 999px 999px;
+    background: linear-gradient(90deg, var(--sp-blue), var(--sp-purple));
+  }
+
+  .pricing-card__label {
+    display: inline-flex;
+    margin: 0 0 1rem;
+    padding: .4rem .7rem;
+    border: 1px solid rgba(26, 71, 214, .18);
+    border-radius: 999px;
+    background: rgba(26, 71, 214, .04);
+    color: var(--sp-blue);
+    font-family: Poppins, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+
+  .pricing-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: .55rem;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-card__price > span {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+    font-size: clamp(2.8rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -.05em;
+  }
+
+  .pricing-card__price small {
+    color: var(--sp-muted);
+    font-size: .85rem;
+  }
+
+  .pricing-card__lead,
+  .pricing-card__note {
+    color: var(--sp-muted);
+    line-height: 1.65;
+  }
+
+  .pricing-card ul {
+    display: grid;
+    gap: .65rem;
+    margin: 1.3rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pricing-card li {
+    position: relative;
+    padding-left: 1.45rem;
+    color: var(--sp-muted);
+    line-height: 1.5;
+  }
+
+  .pricing-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sp-blue);
+    font-weight: 700;
+  }
+
+  .capacity-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .75rem;
+    margin: 1.15rem 0 1.35rem;
+  }
+
+  .capacity-pair > div {
+    display: grid;
+    gap: .2rem;
+    padding: 1rem;
+    border: 1px solid var(--sp-border);
+    border-radius: 16px;
+    background: var(--sp-bg);
+  }
+
+  .capacity-pair strong {
+    color: var(--sp-ink);
+    font-family: Poppins, sans-serif;
+    font-size: 1.1rem;
+  }
+
+  .capacity-pair span {
+    color: var(--sp-muted);
+    font-size: .84rem;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .comparison-grid--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .comparison-grid__current {
+    border-color: rgba(26, 71, 214, .3) !important;
+    background: linear-gradient(180deg, rgba(26, 71, 214, .055), #fff) !important;
+  }
+
+  .comparison-grid .sp-text-link {
+    margin-top: 1.2rem;
+  }
+
+  .product-cta-section {
+    padding: clamp(4rem, 7vw, 7rem) 0;
+  }
+
+  .product-cta-card {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(2rem, 5vw, 3.5rem);
+    border: 1px solid var(--sp-border);
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(32, 36, 79, .08);
+  }
+
+  .product-cta-card > div {
+    max-width: 780px;
+  }
+
+  @media (max-width: 1000px) {
+    .workflow-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 900px) {
+    .product-page-grid,
+    .product-two-col,
+    .usage-grid,
+    .role-grid,
+    .pricing-grid,
+    .comparison-grid,
+    .comparison-grid--two {
+      grid-template-columns: 1fr;
+    }
+
+    .pricing-heading-row,
+    .product-cta-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .workflow-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .capacity-pair {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

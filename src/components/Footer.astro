@@ -1,3 +1,16 @@
+---
+import { withBase } from "../lib/paths";
+
+const aboutHref = withBase("/about");
+const spmHref = withBase("/stayprivatemail");
+const secureCommHref = withBase("/secure-comm");
+const bespokeHref = withBase("/bespoke");
+const trustHref = withBase("/trust");
+const contactHref = withBase("/contact");
+const termsHref = withBase("/terms");
+const privacyHref = withBase("/terms/#PrivacyPolicy");
+---
+
 <footer class="sp-footer">
   <div class="sp-container">
     <div class="sp-footer-grid">
@@ -6,31 +19,20 @@
         <div class="sp-footer-logo">StayPrivate</div>
 
         <p class="sp-footer-description">
-          Secure products and bespoke solutions for document delivery, storage and communication.
+          Secure communication between businesses and their customers — from
+          document delivery to private two-way communication and fully controlled
+          customer environments.
         </p>
       </div>
 
       <div>
-        <h3>Products</h3>
+        <h3>Business products</h3>
 
         <ul>
-          <li>
-            <a href="https://documentd.com">
-              Documentd
-            </a>
-          </li>
-
-          <li>
-            <a href="https://keepd.com">
-              Keepd
-            </a>
-          </li>
-
-          <li>
-            <a href="/bespoke">
-              Bespoke
-            </a>
-          </li>
+          <li><a href="https://documentd.com">Documentd</a></li>
+          <li><a href={spmHref}>StayPrivateMail</a></li>
+          <li><a href={secureCommHref}>Secure Communications</a></li>
+          <li><a href={bespokeHref}>Bespoke</a></li>
         </ul>
       </div>
 
@@ -38,24 +40,11 @@
         <h3>Company</h3>
 
         <ul>
-          <li>
-            <a href="/about">
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="/contact">
-              Contact
-            </a>
-          </li>
-
-          <li>
-            <a href="/terms">
-              Terms of Service
-            </a>
-          </li>
-
+          <li><a href={aboutHref}>About</a></li>
+          <li><a href={trustHref}>Trust</a></li>
+          <li><a href={contactHref}>Contact</a></li>
+          <li><a href={privacyHref}>Privacy</a></li>
+          <li><a href={termsHref}>Terms of Service</a></li>
           <li>
             <a
               href="https://admin.stayprivate.com"
@@ -66,6 +55,16 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div>
+        <h3>For individuals</h3>
+        <ul>
+          <li><a href="https://keepd.com">Keepd</a></li>
+        </ul>
+        <p class="sp-footer-description sp-footer-description--small">
+          The private customer environment used by Documentd and StayPrivateMail.
+        </p>
       </div>
 
     </div>
